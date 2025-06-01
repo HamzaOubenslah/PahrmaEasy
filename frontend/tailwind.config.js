@@ -1,6 +1,6 @@
 // tailwind.config.js
 export default {
-  content:[`./{html, js}`],
+  content: [`./{html, js}`],
   theme: {
     extend: {
       fontFamily: {
@@ -9,9 +9,10 @@ export default {
       },
     },
     screens: {
+      initial: "0px",
       sm: "320px",
-      md: "768px", // Medium screen
-      lg: "1440px", // Large screen
+      md: "768px",
+      lg: "1440px",
     },
   },
   plugins: [],

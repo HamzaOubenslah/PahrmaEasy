@@ -2,16 +2,16 @@ import React from "react";
 
 const Section2 = () => {
   return (
-    <div className="flex justify-center items-center bg-[#FFFFFF] w-full pt-[114px]">
-      <div className="flex flex-row justify-center items-center gap-[150px] w-[1187px] pb-[99px]">
+    <div className="flex justify-center items-center bg-[#FFFFFF] w-full pt-[114px] max-[820px]:pt-[50px]">
+      <div className="flex flex-row justify-center items-center gap-[150px] w-[1187px] pb-[99px] max-[1250px]:w-[768px] max-[1250px]:flex-col max-[1250px]:gap-[75px] max-[820px]:w-[320px] max-[820px]:gap-[50px] max-[820px]:pb-[30px]">
       <div className="flex justify-center items-center">
         <img
           src="../../../Home/image 1.svg"
-          className="w-[547px] h-[422px]"
+          className="w-[547px] h-[422px] max-[820px]:w-full max-[820px]:h-full"  
           alt=""
         />
       </div>
-      <div className="flex flex-col justify-start items-start w-[490px] h-[390px]">
+      <div className="flex flex-col justify-start items-start w-[490px] max-[820px]:w-[320px]">
         <p className="font-inter font-semibold text-[#39DB74] text-[36px] mb-[6px]">
           About Us
         </p>

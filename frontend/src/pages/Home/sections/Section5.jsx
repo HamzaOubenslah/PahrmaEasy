@@ -62,7 +62,7 @@ const TestimonialSlider = () => {
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + 3);
 
   return (
-    <div className="w-full max-w-[1120px] mx-auto flex flex-col justify-center items-center py-[80px] px-4">
+    <div className="w-full max-w-[1120px] mx-auto flex flex-col justify-center items-center py-[80px] px-4 max-[1250px]:w-[768px] max-[820px]:w-[320px]">
       {/* Header Section */}
       <div className="flex flex-col justify-center items-center gap-5 w-full max-w-[711px] mb-10 text-center">
         <h2 className="font-bold text-3xl md:text-[40px] font-jakarta">
@@ -75,8 +75,8 @@ const TestimonialSlider = () => {
       </div>
 
       {/* Testimonial Slider */}
-      <div className="w-full flex flex-col items-center gap-10">
-        <div className="relative w-full h-[350px] flex justify-center overflow-hidden">
+      <div className="w-full flex flex-col items-center gap-[36px]">
+        <div className="relative w-full h-[250px] flex justify-center overflow-hidden">
           <div className="flex justify-center items-start w-full">
             <AnimatePresence custom={direction} initial={false}>
               {visibleTestimonials.map((testimonial, index) => (
@@ -107,7 +107,7 @@ const TestimonialSlider = () => {
                       ease: [0.16, 0.77, 0.47, 0.97]
                     }
                   }}
-                  className="absolute w-[90%] max-w-[350px] bg-white rounded-2xl shadow-lg flex flex-col gap-6 p-8 mx-4"
+                  className="absolute w-[90%] max-w-[350px] h-[250px] bg-white rounded-2xl shadow-lg flex flex-col gap-6 p-8 mx-4"
                   style={{
                     left: `${index * 380}px`
                   }}
