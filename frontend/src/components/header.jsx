@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex flex-row justify-center items-center gap-[258px]">
+    <div className="flex flex-row justify-center items-center gap-[258px] py-[21px]">
       <div className="flex justify-center items-center">
         <h4 className="text-[#39DB74] text-[24px] font-bold">
           Pharma<span className="text-[#000000]">Easy</span>
