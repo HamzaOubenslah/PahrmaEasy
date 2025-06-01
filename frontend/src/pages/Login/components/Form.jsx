@@ -26,7 +26,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[470px] p-6 bg-white rounded-[15px] shadow-md"
+      className="w-[470px] p-6 bg-white rounded-[15px] shadow-md max-[520px]:w-[320px]"
     >
       <p className="font-roboto font-medium text-[20px] mb-[15px] text-center text-[#4CAF50]">
         Créer un compte
@@ -36,10 +36,10 @@ const Form = () => {
       </p>
 
       {/* Role Selection */}
-      <div className="mb-4">
-        <label className="block text-gray-700 mb-2">Je Suis Un:</label>
-        <div className="flex justify-center items-center space-x-4 mb-[26px]">
-          <label className="inline-flex items-center py-[16px] px-[22px] bg-[#F4F4F4] w-[163px] rounded-[10px]">
+      <div className="flex flex-col justify-center items-center  mb-4">
+        <label className="flex justify-start w-full text-gray-700 mb-2">Je Suis Un:</label>
+        <div className="flex justify-center items-center space-x-4 mb-[26px] max-[520px]:w-[300px]">
+          <label className="flex items-center py-[16px] px-[22px] bg-[#F4F4F4] w-[163px] rounded-[10px] max-[520px]:py-[8px] max-[520px]:px-[11px] max-[520px]:w-[120px]">
             <input
               type="radio"
               name="role"
@@ -48,9 +48,9 @@ const Form = () => {
               onChange={handleChange}
               className="form-radio text-emerald-500"
             />
-            <span className="ml-2">Client/Patient</span>
+            <span className="ml-2 max-[520px]:text-[10px]">Client/Patient</span>
           </label>
-          <label className="inline-flex items-center py-[16px] px-[22px] bg-[#F4F4F4] w-[163px] rounded-[10px]">
+          <label className="inline-flex items-center py-[16px] px-[22px] bg-[#F4F4F4] w-[163px] rounded-[10px] max-[520px]:py-[8px] max-[520px]:px-[11px] max-[520px]:w-[120px]">
             <input
               type="radio"
               name="role"
@@ -59,7 +59,7 @@ const Form = () => {
               onChange={handleChange}
               className="form-radio text-emerald-500"
             />
-            <span className="ml-2">Pharmacien</span>
+            <span className="ml-2 max-[520px]:text-[10px]">Pharmacien</span>
           </label>
         </div>
       </div>

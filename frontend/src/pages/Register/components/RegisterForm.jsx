@@ -22,7 +22,7 @@ const RegisterForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[470px] p-6 bg-white rounded-[15px] shadow-md"
+      className="w-[470px] p-6 bg-white rounded-[15px] shadow-md max-[520px]:w-[320px]"
     >
       <p className="font-roboto font-medium text-[20px] mb-[15px] text-center text-[#4CAF50]">
         Connectez-vous
