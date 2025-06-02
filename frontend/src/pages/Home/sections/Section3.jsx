@@ -15,7 +15,7 @@ const Section3 = () => {
           l'expérience pharmaceutique à tous les niveaux
         </p>
       </div>
-      <div className=" flex justify-center items-center flex-wrap gap-[80px]">
+      <div className=" flex justify-center items-center flex-wrap gap-[80px] max-[820px]:gap-[30px]">
         {HomeCards.map((c, i) => (
           <Card
           className={"bg-white shadow-md"}

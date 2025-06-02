@@ -10,8 +10,7 @@ const Header = () => {
     {
       name: 'Fonctionnalités',
       link: '#',
-      dropdown: true,
-      subItems: ['Gestion médicaments', 'Rappels', 'Suivi patients'],
+      dropdown: false,
     },
     { name: 'Services', link: '#', dropdown: false },
     { name: 'A Propos', link: '#', dropdown: false },
