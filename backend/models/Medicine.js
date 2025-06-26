@@ -1,15 +1,21 @@
-import mongoose, { Types } from "mongoose";
+import mongoose from 'mongoose';
 
-const medicineSchema = new mongoose.Schema(
-  {
-    pharmacy: { type: mongoose.Schema.Types.ObjectId, ref: "Pharmacy" },
-    name: { type: String, required: true },
-    description: String,
-    price: { type: Number, required: true },
-    category: { type: mongoose.Schema.Types.ObjectId, ref: "Category" },
-    stock: { type: Number, required: true },
+const medicineSchema = new mongoose.Schema({
+  pharmacy: { 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'Pharmacy',
+    required: true 
   },
-  { timestamps: true }
-);
+  name: { type: String, required: true },
+  description: String,
+  price: { type: Number, required: true, min: 0 },
+  category: { 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'Category',
+    required: true 
+  },
+  stock: { type: Number, required: true, min: 0 },
+  image: String,
+}, { timestamps: true });
 
-export default mongoose.model("Medicine", medicineSchema);
+export default mongoose.model('Medicine', medicineSchema);

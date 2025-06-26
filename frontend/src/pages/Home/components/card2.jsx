@@ -9,7 +9,6 @@ const Card2 = ({ title, sentences }) => {
           {title}
         </p>
       </div>
-
       <div className="flex flex-col gap-[20px] ">
         {sentences.map((sentence, i) => (
           <div key={i} className="flex flex-row items-center gap-[20px]">
