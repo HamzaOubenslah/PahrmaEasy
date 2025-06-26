@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
 import logger from './utils/logger.js';
+import authRoute from './routes/authRoute.js';
 
 // Initialize Express app
 const app = express();
@@ -26,6 +27,8 @@ const limiter = rateLimit({
   legacyHeaders: false
 });
 app.use(limiter);
+
+app.use('/api/auth',authRoute );
 
 // Request Logging
 app.use((req, res, next) => {

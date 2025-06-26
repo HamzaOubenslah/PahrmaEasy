@@ -45,7 +45,7 @@ export const successResponse = (res, data, message = "Operation successful", sta
 /**
  * Helper function for error responses (uses ApiError)
  * @param {import('express').Response} res 
- * @param {import('./apiError').default} error 
+ * @param {import('./ApiError').default} error 
  */
 export const errorResponse = (res, error) => {
   new ApiResponse(
