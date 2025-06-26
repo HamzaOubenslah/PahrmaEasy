@@ -6,6 +6,8 @@ const orderSchema = new mongoose.Schema({
   status: { type: String, enum: ['pending', 'shipped', 'delivered'], default: 'pending' },
   payment: { type: String, enum: ['card', 'cash'], required: true },
   totalPrice: Number,
+  ordonance:String
+
 }, { timestamps: true });
 
 export default mongoose.model('Order', orderSchema);
