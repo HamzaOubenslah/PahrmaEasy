@@ -7,13 +7,6 @@ import { MdOutlineAddAlert } from "react-icons/md";
 import { ImStatsBars } from "react-icons/im";
 import { ImStatsDots } from "react-icons/im";
 
-
-
-
-
-
-
-
 export const HomeCards = [
   {
     icon: (

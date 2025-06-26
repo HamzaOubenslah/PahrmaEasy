@@ -3,6 +3,8 @@ import logger from "../utils/logger.js";
 import dotenv from "dotenv";
 dotenv.config();
 
+console.log("This Is The MongoURL",process.env.MONGO_URI)
+
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);

@@ -1,165 +1,220 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [data, setData] = useState({
     role: "",
-    nom: "",
+    name: "",
     email: "",
-    nomDePharmacy: "",
-    motDePasse: "",
-    confirmationMotDePasse: "",
+    password: "",
+    confirmPassword: "",
+    address: "",
+    phone: "",
+  });
+  const navigate = useNavigate();
+
+  const [coordinates, setCoordinates] = useState({
+    latitude: null,
+    longitude: null,
   });
 
+  console.log("This Is The Coordinates",coordinates)
+
+  useEffect(() => {
+    if (data.role === "pharmacy") {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            setCoordinates({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+            });
+          },
+          (error) => {
+            console.error("Geolocation error:", error.message);
+            alert("Erreur de géolocalisation");
+          }
+        );
+      } else {
+        alert("Votre navigateur ne supporte pas la géolocalisation.");
+      }
+    }
+  }, [data.role]);
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
     setData((prev) => ({
       ...prev,
-      [name]: value,
+      [e.target.name]: e.target.value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(data); // You can replace this with your form submission logic
+
+    if (data.password !== data.confirmPassword) {
+      alert("Les mots de passe ne correspondent pas.");
+      return;
+    }
+
+    const userData = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+      role: data.role,
+      profileImage: null, // Add image upload logic if needed
+    };
+
+    if (data.role === "pharmacy") {
+      if (!coordinates.latitude || !coordinates.longitude) {
+        alert("Localisation manquante !");
+        return;
+      }
+
+      userData.address = data.address;
+      userData.phone = data.phone;
+      userData.location = {
+        type: "Point",
+        coordinates: [coordinates.latitude, coordinates.longitude],
+      };
+    }
+    console.log("This Is The USERDATE",userData.location);
+
+    try {
+      const res = await fetch("http://localhost:5001/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        alert("Inscription réussie !");
+        navigate("/register");
+      } else {
+        alert(result.message || "Erreur d'inscription.");
+      }
+    } catch (err) {
+      console.error("Erreur serveur :", err);
+      alert("Échec de la connexion au serveur.");
+    }
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[470px] p-6 bg-white rounded-[15px] shadow-md max-[520px]:w-[320px]"
+      className="w-[470px] p-6 bg-white rounded-xl shadow-md max-[520px]:w-[320px]"
     >
-      <p className="font-roboto font-medium text-[20px] mb-[15px] text-center text-[#4CAF50]">
+      <h2 className="text-2xl font-semibold text-center mb-6 text-emerald-600">
         Créer un compte
-      </p>
-      <p className="font-roboto text-[12px] text-[#474749] mb-[20px] text-center">
-        Rejoignez PharmaEasy et simplifiez votre expérience pharmaceutique
-      </p>
+      </h2>
 
-      {/* Role Selection */}
-      <div className="flex flex-col justify-center items-center  mb-4">
-        <label className="flex justify-start w-full text-gray-700 mb-2">Je Suis Un:</label>
-        <div className="flex justify-center items-center space-x-4 mb-[26px] max-[520px]:w-[300px]">
-          <label className="flex items-center py-[16px] px-[22px] bg-[#F4F4F4] w-[163px] rounded-[10px] max-[520px]:py-[8px] max-[520px]:px-[11px] max-[520px]:w-[120px]">
-            <input
-              type="radio"
-              name="role"
-              value="client"
-              checked={data.role === "client"}
-              onChange={handleChange}
-              className="form-radio text-emerald-500"
-            />
-            <span className="ml-2 max-[520px]:text-[10px]">Client/Patient</span>
-          </label>
-          <label className="inline-flex items-center py-[16px] px-[22px] bg-[#F4F4F4] w-[163px] rounded-[10px] max-[520px]:py-[8px] max-[520px]:px-[11px] max-[520px]:w-[120px]">
-            <input
-              type="radio"
-              name="role"
-              value="pharmacist"
-              checked={data.role === "pharmacist"}
-              onChange={handleChange}
-              className="form-radio text-emerald-500"
-            />
-            <span className="ml-2 max-[520px]:text-[10px]">Pharmacien</span>
-          </label>
-        </div>
+      {/* Role */}
+      <div className="flex justify-center gap-10 mb-6 text-sm">
+        <label className="flex items-center gap-1">
+          <input
+            type="radio"
+            name="role"
+            value="customer"
+            checked={data.role === "customer"}
+            onChange={handleChange}
+          />
+          Client
+        </label>
+        <label className="flex items-center gap-1">
+          <input
+            type="radio"
+            name="role"
+            value="pharmacy"
+            checked={data.role === "pharmacy"}
+            onChange={handleChange}
+          />
+          Pharmacie
+        </label>
       </div>
 
-      {/* Pharmacy Name (Conditional) */}
-      {data.role === "pharmacist" && (
-        <div className="mb-[14px]">
-          <label
-            htmlFor="nomDePharmacy"
-            className="block text-gray-700 mb-[12px]"
-          >
-            Nom de la pharmacie
-          </label>
-          <input
-            type="text"
-            id="nomDePharmacy"
-            name="nomDePharmacy"
-            value={data.nomDePharmacy}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            required
-          />
-        </div>
+      {/* Pharmacy only fields */}
+      {data.role === "pharmacy" && (
+        <>
+          <div className="mb-4">
+            <input
+              type="text"
+              name="address"
+              value={data.address}
+              onChange={handleChange}
+              placeholder="Adresse"
+              className="w-full border border-gray-300 p-2 rounded"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <input
+              type="text"
+              name="phone"
+              value={data.phone}
+              onChange={handleChange}
+              placeholder="Téléphone"
+              className="w-full border border-gray-300 p-2 rounded"
+              required
+            />
+          </div>
+        </>
       )}
 
-      {/* Name */}
-      <div className="mb-[14px]">
-        <label htmlFor="nom" className="block text-gray-700 mb-2">
-          Nom complet
-        </label>
+      {/* Common fields */}
+      <div className="mb-4">
         <input
           type="text"
-          id="nom"
-          name="nom"
-          value={data.nom}
+          name="name"
+          value={data.name}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          placeholder="Nom complet"
+          className="w-full border border-gray-300 p-2 rounded"
           required
         />
       </div>
-
-      {/* Email */}
-      <div className="mb-[14px]">
-        <label htmlFor="email" className="block text-gray-700 mb-2">
-          Email
-        </label>
+      <div className="mb-4">
         <input
           type="email"
-          id="email"
           name="email"
           value={data.email}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          placeholder="Email"
+          className="w-full border border-gray-300 p-2 rounded"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <input
+          type="password"
+          name="password"
+          value={data.password}
+          onChange={handleChange}
+          placeholder="Mot de passe"
+          className="w-full border border-gray-300 p-2 rounded"
+          required
+        />
+      </div>
+      <div className="mb-6">
+        <input
+          type="password"
+          name="confirmPassword"
+          value={data.confirmPassword}
+          onChange={handleChange}
+          placeholder="Confirmer le mot de passe"
+          className="w-full border border-gray-300 p-2 rounded"
           required
         />
       </div>
 
-      {/* Password */}
-      <div className="mb-[14px]">
-        <label htmlFor="motDePasse" className="block text-gray-700 mb-2">
-          Mot de passe
-        </label>
-        <input
-          type="password"
-          id="motDePasse"
-          name="motDePasse"
-          value={data.motDePasse}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
-          required
-        />
-      </div>
-      <div className="mb-[31px]">
-        <label htmlFor="motDePasse" className="block text-gray-700 mb-2">
-          Confirmer le mot de passe
-        </label>
-        <input
-          type="password"
-          id="confirmationMotDePasse"
-          name="confirmationMotDePasse"
-          value={data.confirmationMotDePasse}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
-          required
-        />
-      </div>
-
-      {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-emerald-500 text-white mb-[21px] py-2 px-4 rounded-[10px] hover:bg-emerald-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+        className="w-full bg-emerald-500 text-white py-2 rounded hover:bg-emerald-600 transition"
       >
-        Créer un compte
+        S'inscrire
       </button>
-      <div className="flex justify-center items-center">
-        <p className="font-inter text-[12px]">
-          Déja inscrit ?<a href="" className="text-[#4CAF50]"> Connectez-Vouz</a>
-        </p>
-        <p></p>
-      </div>
     </form>
   );
 };
