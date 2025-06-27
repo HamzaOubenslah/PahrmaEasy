@@ -3,24 +3,24 @@ import ApiResponse from "../utils/ApiResponse.js";
 import asyncHandler from "../utils/asyncHandler.js";
 
 export const register = asyncHandler(async (req, res) => {
-  const profileImage = req.file?.path || '';
+  const profileImage = req.file?.path || "";
 
-  const location = req.body.location
-    ? JSON.parse(req.body.location)  // assuming location sent as stringified object
-    : undefined;
+  const location = req.body.location;
 
   const user = await authService.createUser({
     ...req.body,
     profileImage,
-    location
+    location,
   });
 
   res.status(201).json(new ApiResponse(201, user, "User Created"));
 });
 
 export const login = asyncHandler(async (req, res) => {
-  const { user, token } = await authService.loginUser(req.body);
-  res.status(200).json(new ApiResponse(200, { user, token }, "Login Successful"));
+  const { user, token } = await authService.loginUser(req.body, res);
+  res
+    .status(200)
+    .json(new ApiResponse(200, { user, token }, "Login Successful"));
 });
 
 export const getProfile = asyncHandler(async (req, res) => {
@@ -46,7 +46,11 @@ export const updateProfile = asyncHandler(async (req, res) => {
 });
 
 export const handleRefreshToken = asyncHandler(async (req, res) => {
-  const { refreshToken } = req.body;
+  const { refreshToken } = req.cookies;
+  console.log(
+    "This Is The Refresh Token In RefreshToken Controller",
+    refreshToken
+  );
 
   if (!refreshToken) {
     return res.status(400).json("No refresh token provided");
@@ -54,7 +58,7 @@ export const handleRefreshToken = asyncHandler(async (req, res) => {
 
   const newAccessToken = await authService.refreshAccessToken(refreshToken);
 
-  res.status(200).json(
-    new ApiResponse(200, newAccessToken, "Access Token Refreshed")
-  );
+  res
+    .status(200)
+    .json(new ApiResponse(200, newAccessToken, "Access Token Refreshed"));
 });

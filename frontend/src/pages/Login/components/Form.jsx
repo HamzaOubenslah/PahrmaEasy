@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../../store/authThunk/authThunk";
+import { useDispatch } from "react-redux";
 
 const Form = () => {
   const [data, setData] = useState({
@@ -12,13 +14,13 @@ const Form = () => {
     phone: "",
   });
   const navigate = useNavigate();
-
+  const dispatch=useDispatch();
   const [coordinates, setCoordinates] = useState({
     latitude: null,
     longitude: null,
   });
 
-  console.log("This Is The Coordinates",coordinates)
+  console.log("This Is The Coordinates", coordinates);
 
   useEffect(() => {
     if (data.role === "pharmacy") {
@@ -77,29 +79,9 @@ const Form = () => {
         coordinates: [coordinates.latitude, coordinates.longitude],
       };
     }
-    console.log("This Is The USERDATE",userData.location);
-
-    try {
-      const res = await fetch("http://localhost:5001/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
-
-      const result = await res.json();
-
-      if (res.ok) {
-        alert("Inscription réussie !");
-        navigate("/register");
-      } else {
-        alert(result.message || "Erreur d'inscription.");
-      }
-    } catch (err) {
-      console.error("Erreur serveur :", err);
-      alert("Échec de la connexion au serveur.");
-    }
+    console.log("This Is The USERDATE", userData.location);
+    dispatch(registerUser(userData));
+    navigate('/login');
   };
 
   return (

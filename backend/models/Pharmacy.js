@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const pharmacySchema = new mongoose.Schema({
   address: { type: String, required: true },
   phone: { type: String, required: true },
-  licenseNumber: { type: String, required: true },
+  licenseNumber: { type: String },
   operatingHours: String,
   is24Hours: { type: Boolean, default: false },
   location: {

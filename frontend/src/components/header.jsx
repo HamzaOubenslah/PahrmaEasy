@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -13,6 +14,8 @@ const Header = () => {
     { name: 'A Propos', to: '/about', dropdown: false },
     { name: 'S\'inscrire', to: '/register', dropdown: false },
   ];
+
+  const token=useSelector(state=>state.auth.token);
 
   const toggleDropdown = (name) => {
     setActiveDropdown(activeDropdown === name ? null : name);
