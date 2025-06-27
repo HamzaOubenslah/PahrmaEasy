@@ -7,6 +7,8 @@ const API = axios.create({
   withCredentials: true,
 });
 
+const token = localStorage.getItem("token");
+
 // === ASYNC THUNKS ===
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
@@ -52,7 +54,14 @@ export const getProfile = createAsyncThunk(
   "auth/getProfile",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await API.get("/profile");
+      const token = localStorage.getItem("token"); // or get from Redux
+      console.log("This Is The Token In GetUser Function", token);
+      const res = await API.get("/profile", {
+        headers: {
+          Authorization: `Bearer ${token}`, // ✅ attach token
+        },
+      });
+      console.log("This Is The Result Of GetUser Thunk", res);
       return res.data;
     } catch (err) {
       return rejectWithValue(
@@ -66,8 +75,11 @@ export const updateProfile = createAsyncThunk(
   "auth/updateProfile",
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await API.put("/profile/edit", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+      const res = await API.post("/profile/edit", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
       });
       return res.data;
     } catch (err) {
@@ -78,13 +90,29 @@ export const updateProfile = createAsyncThunk(
   }
 );
 
+export const fetchNearbyPharmacies = createAsyncThunk(
+  "pharmacy/fetchNearbyPharmacies",
+  async ({ lat, lng }, { rejectWithValue }) => {
+    try {
+      const res = await API.get(`/nearby?lat=${lat}&lng=${lng}`);
+      console.log("This Is The Nears Pharmacies", res);
+      return res.data.data; // Assuming the structure: { data: [...] }
+    } catch (err) {
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to fetch pharmacies"
+      );
+    }
+  }
+);
+
 // === INITIAL STATE ===
 const initialState = {
-  user: null,
-  token: null,
+  user: JSON.parse(localStorage.getItem("user")) || null,
+  token: localStorage.getItem("token") || null,
   loading: false,
   error: null,
   success: false,
+  nearbyPharmacies: [],
 };
 
 // === SLICE ===
@@ -99,8 +127,12 @@ const authSlice = createSlice({
       localStorage.removeItem("token");
     },
     setToken: (state, action) => {
-      console.log("This Is The Data That We Get On This Action",action.payload.data);
-      state.token = action.payload.data;
+      const { token, user } = action.payload;
+      state.token = token;
+      if (user) state.user = user;
+
+      localStorage.setItem("token", token);
+      if (user) localStorage.setItem("user", JSON.stringify(user));
     },
   },
   extraReducers: (builder) => {
@@ -112,11 +144,11 @@ const authSlice = createSlice({
       })
       .addCase(registerUser.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload.user;
-        state.token = action.payload.token;
+        // state.user = action.payload.user;
+        // state.token = action.payload.token;
         state.success = true;
-        localStorage.setItem("user", JSON.stringify(action.payload.user));
-        localStorage.setItem("token", action.payload.token);
+        // localStorage.setItem("user", JSON.stringify(action.payload.user));
+        // localStorage.setItem("token", action.payload.token);
       })
       .addCase(registerUser.rejected, (state, action) => {
         state.loading = false;
@@ -130,14 +162,19 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
-        console.log("This Is The Payload That I Get", action.payload);
+        const { user, access_Token } = action.payload.data.data;
+        console.log("This Is The Access_Token If Login FulFilled",access_Token);
+        console.log("This Is The user If Login FulFilled",user);
+        console.log("This Is The Payload In The Login FulFilled",action.payload);
         state.loading = false;
-        state.user = action.payload.data.data.user;
-        state.token = action.payload.data.data.token;
-        state.success = true;
-        localStorage.setItem("user", JSON.stringify(action.payload.data.user));
-        localStorage.setItem("token", action.payload.data.token);
+        state.user = user;
+        state.token = access_Token;
+        // state.success = true;
+
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("token", access_Token);
       })
+
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
@@ -168,8 +205,9 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(getProfile.fulfilled, (state, action) => {
+        console.log("This is The Payload In GetUser", action.payload);
         state.loading = false;
-        state.user = action.payload.user || action.payload;
+        state.user = action.payload.data;
       })
       .addCase(getProfile.rejected, (state, action) => {
         state.loading = false;
@@ -182,8 +220,9 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(updateProfile.fulfilled, (state, action) => {
+        console.log("This Is The Payload After Uofdate The User",action.payload);
         state.loading = false;
-        state.user = action.payload.user || action.payload;
+        state.user = action.payload.data;
         state.success = true;
         localStorage.setItem("user", JSON.stringify(state.user));
       })
@@ -191,6 +230,18 @@ const authSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
         state.success = false;
+      })
+      .addCase(fetchNearbyPharmacies.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchNearbyPharmacies.fulfilled, (state, action) => {
+        state.loading = false;
+        state.nearbyPharmacies = action.payload;
+      })
+      .addCase(fetchNearbyPharmacies.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
       });
   },
 });

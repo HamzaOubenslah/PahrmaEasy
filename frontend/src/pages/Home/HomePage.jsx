@@ -18,22 +18,7 @@ const HomePage = () => {
   // const token = store.getState().auth.token;
   const navigate = useNavigate();
   const token = useSelector((state) => state.auth.token);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   if (!token) {
-  //     navigate("/login");
-  //     // const RefreshToken = async () => {
-  //     //   const result = await dispatch(refreshToken()).unwrap();
-  //     //   dispatch(setToken(result));
-  //   }
-  //   // RefreshToken();
-  // }, []);
-  // useEffect(() => {
-  //   console.log("This Is The Token In UseEffect",token);
-  //   if (!token) {
-  //     navigate("/login");
-  //   }
-  // }, []);
+  
   console.log("This Is The Token", token);
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">

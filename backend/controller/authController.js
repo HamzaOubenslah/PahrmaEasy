@@ -1,6 +1,7 @@
 import * as authService from "../service/authService.js";
 import ApiResponse from "../utils/ApiResponse.js";
 import asyncHandler from "../utils/asyncHandler.js";
+import { getNearbyPharmacies } from "../service/authService.js";
 
 export const register = asyncHandler(async (req, res) => {
   const profileImage = req.file?.path || "";
@@ -17,10 +18,10 @@ export const register = asyncHandler(async (req, res) => {
 });
 
 export const login = asyncHandler(async (req, res) => {
-  const { user, token } = await authService.loginUser(req.body, res);
+  const { user, access_Token } = await authService.loginUser(req.body, res);
   res
     .status(200)
-    .json(new ApiResponse(200, { user, token }, "Login Successful"));
+    .json(new ApiResponse(200, { user, access_Token }, "Login Successful"));
 });
 
 export const getProfile = asyncHandler(async (req, res) => {
@@ -29,21 +30,24 @@ export const getProfile = asyncHandler(async (req, res) => {
 });
 
 export const updateProfile = asyncHandler(async (req, res) => {
-  const profileImage = req.file?.path;
-
-  const location = req.body.location
-    ? JSON.parse(req.body.location)
-    : undefined;
+  // Check if a file was uploaded
+  console.log("This Is The Req.file",req.file);
+  let profileImageBase64 = null;
+  if (req.file) {
+    // Convert buffer to base64 string with MIME type
+    const base64Image = `data:${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
+    profileImageBase64 = base64Image;
+  }
 
   const updateData = {
     ...req.body,
-    ...(profileImage && { profileImage }),
-    ...(location && { location }),
+    ...(profileImageBase64 && { profileImage: profileImageBase64 }),
   };
 
   const user = await authService.updateUser(req.user.id, updateData);
   res.status(200).json(new ApiResponse(200, user, "Profile Updated"));
 });
+
 
 export const handleRefreshToken = asyncHandler(async (req, res) => {
   const { refreshToken } = req.cookies;
@@ -61,4 +65,18 @@ export const handleRefreshToken = asyncHandler(async (req, res) => {
   res
     .status(200)
     .json(new ApiResponse(200, newAccessToken, "Access Token Refreshed"));
+});
+
+export const findNearbyPharmacies = asyncHandler(async (req, res) => {
+  const { lat, lng, maxDistance } = req.query;
+
+  const pharmacies = await getNearbyPharmacies({
+    latitude: lat,
+    longitude: lng,
+    maxDistance: maxDistance ? parseInt(maxDistance) : 5000, // optional
+  });
+
+  res
+    .status(200)
+    .json(new ApiResponse(200, pharmacies, "Nearby pharmacies fetched successfully"));
 });

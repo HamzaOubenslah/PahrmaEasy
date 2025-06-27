@@ -19,6 +19,8 @@ import RegisterPage from "./pages/Register/RegisterPage";
 import { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { refreshToken, setToken } from "./store/authThunk/authThunk";
+import NearbyPharmaciesPage from "./pages/Home/NearbyPharmacies";
+import ProfilePage from "./pages/profile";
 
 export default function App() {
   const token = useSelector((state) => state.auth.token);
@@ -28,12 +30,9 @@ export default function App() {
     const tryRefreshToken = async () => {
       try {
         const result = await dispatch(refreshToken()).unwrap();
-        if (result.data) {
-          dispatch(setToken(result));
-        }
+        dispatch(setToken(result));
       } catch (err) {
         console.error("Refresh token failed", err);
-        // Optional: navigate to login or show alert
       }
     };
 
@@ -42,6 +41,7 @@ export default function App() {
       tryRefreshToken();
     }
   }, [dispatch, token]);
+
   return (
     <div className="bg-[#ECF6FF] h-full w-full">
       <BrowserRouter>
@@ -50,6 +50,8 @@ export default function App() {
             <Route index path="/" element={<HomePage />} />
             <Route path="/login" element={<RegisterPage />} />
             <Route path="/register" element={<LoginPage />} />
+            <Route path="/near-pharmacies" element={<NearbyPharmaciesPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Route>
         </Routes>
       </BrowserRouter>
