@@ -163,9 +163,15 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         const { user, access_Token } = action.payload.data.data;
-        console.log("This Is The Access_Token If Login FulFilled",access_Token);
-        console.log("This Is The user If Login FulFilled",user);
-        console.log("This Is The Payload In The Login FulFilled",action.payload);
+        console.log(
+          "This Is The Access_Token If Login FulFilled",
+          access_Token
+        );
+        console.log("This Is The user If Login FulFilled", user);
+        console.log(
+          "This Is The Payload In The Login FulFilled",
+          action.payload
+        );
         state.loading = false;
         state.user = user;
         state.token = access_Token;
@@ -220,7 +226,10 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(updateProfile.fulfilled, (state, action) => {
-        console.log("This Is The Payload After Uofdate The User",action.payload);
+        console.log(
+          "This Is The Payload After Uofdate The User",
+          action.payload
+        );
         state.loading = false;
         state.user = action.payload.data;
         state.success = true;
@@ -236,6 +245,7 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchNearbyPharmacies.fulfilled, (state, action) => {
+        console.log("This Is The Nearby Pharmacies Payload", action.payload);
         state.loading = false;
         state.nearbyPharmacies = action.payload;
       })

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNearbyPharmacies } from "../../store/authThunk/authThunk";
 
@@ -42,7 +42,7 @@ const NearbyPharmaciesPage = () => {
           {nearbyPharmacies.map((pharmacy) => (
             <div
               key={pharmacy._id}
-              className="p-6 rounded-2xl border border-indigo-200 shadow-md bg-gradient-to-tr from-indigo-100 via-purple-50 to-pink-50 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:border-indigo-300"
+              className="p-6 rounded-2xl border border-indigo-200 shadow-md bg-gradient-to-tr from-indigo-100 via-purple-50 to-pink-50 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
             >
               <h2 className="text-2xl font-semibold mb-3 text-indigo-800">
                 {pharmacy.name}
