@@ -3,11 +3,12 @@ import axios from "axios";
 
 // Axios instance
 const API = axios.create({
-  baseURL: "http://localhost:5001/api/auth",
+  baseURL: "http://localhost:3000/api/auth",
   withCredentials: true,
 });
 
 const token = localStorage.getItem("token");
+export const selectUserRole = (state) => state.auth.user?.role || null;
 
 // === ASYNC THUNKS ===
 export const registerUser = createAsyncThunk(
@@ -45,7 +46,7 @@ export const refreshToken = createAsyncThunk(
       const res = await API.post("/refresh-token");
       return res.data;
     } catch (err) {
-      return rejectWithValue("Token refresh failed");
+      return rejectWithValue("Token refresh failed",err);
     }
   }
 );
@@ -115,17 +116,20 @@ const initialState = {
   nearbyPharmacies: [],
 };
 
+
+
 // === SLICE ===
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
     logout: (state) => {
-      state.user = null;
-      state.token = null;
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
-    },
+  state.user = null;
+  state.token = null;
+  state.success = false;
+  localStorage.removeItem("user");
+  localStorage.removeItem("token");
+},
     setToken: (state, action) => {
       const { token, user } = action.payload;
       state.token = token;
@@ -142,7 +146,7 @@ const authSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(registerUser.fulfilled, (state, action) => {
+      .addCase(registerUser.fulfilled, (state) => {
         state.loading = false;
         // state.user = action.payload.user;
         // state.token = action.payload.token;
@@ -161,19 +165,31 @@ const authSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(loginUser.fulfilled, (state, action) => {
-        const { user, access_Token } = action.payload.data.data;
-        console.log("This Is The Access_Token If Login FulFilled",access_Token);
-        console.log("This Is The user If Login FulFilled",user);
-        console.log("This Is The Payload In The Login FulFilled",action.payload);
-        state.loading = false;
-        state.user = user;
-        state.token = access_Token;
-        // state.success = true;
+      // .addCase(loginUser.fulfilled, (state, action) => {
+      //   const { user, access_Token } = action.payload.data.data;
+      //   console.log("This Is The Access_Token If Login FulFilled",access_Token);
+      //   console.log("This Is The user If Login FulFilled",user);
+      //   console.log("This Is The Payload In The Login FulFilled",action.payload);
+      //   state.loading = false;
+      //   state.user = user;
+      //   state.token = access_Token;
+      //   // state.success = true;
 
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("token", access_Token);
-      })
+      //   localStorage.setItem("user", JSON.stringify(user));
+      //   localStorage.setItem("token", access_Token);
+      // })
+    .addCase(loginUser.fulfilled, (state, action) => {
+  const { user, access_Token } = action.payload.data.data;
+  state.loading = false;
+  state.user = user;
+  state.token = access_Token;
+  state.success = true;
+
+  localStorage.setItem("user", JSON.stringify(user));
+  localStorage.setItem("token", access_Token);
+})
+
+      
 
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;

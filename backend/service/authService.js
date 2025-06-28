@@ -6,8 +6,95 @@ import ApiError from "../utils/ApiError.js";
 import Order from "../models/Order.js";
 import Review from "../models/Review.js";
 
+
+// import User from '../models/User.js';
+// import jwt from 'jsonwebtoken';
+// import ApiError from '../utils/ApiError.js';
+// import Pharmacy from '../models/Pharmacy.js';
+// import Customer from '../models/Customer.js';
+
 const JWT_SECRET = process.env.JWT_SECRET || "your_secret_key";
 const JWT_REFRESH = process.env.JWT_REFRESH || "your_refresh_key";
+
+// export const createUser = async ({
+//   name,
+//   email,
+//   password,
+//   role,
+//   profileImage,
+//   address,
+//   phone,
+//   licenseNumber,
+//   operatingHours,
+//   is24Hours,
+//   location,
+//   deliveryAddresses,
+//   favoritePharmacies,
+
+//   location
+// }) => {
+//   const existing = await User.findOne({ email });
+//   if (existing) throw new ApiError(400, "User already exists");
+
+//   let newUser;
+
+//   if (role === "pharmacy") {
+//     if (!address || !phone || !location?.coordinates) {
+//       throw new ApiError(
+//         400,
+//         "Pharmacy must include address, phone, and location"
+//       );
+//     }
+
+//     newUser = new Pharmacy({
+//       name,
+//       email,
+//       password,
+//       role,
+//       profileImage,
+//       address,
+//       phone,
+//       licenseNumber,
+//       operatingHours,
+//       is24Hours,
+//       location,
+//     });
+//   } else if (role === "customer") {
+//     newUser = new Customer({
+//       name,
+//       email,
+//       password,
+//       role,
+//       profileImage,
+//       deliveryAddresses,
+//       favoritePharmacies,
+//     });
+//   } else {
+//     throw new ApiError(400, "Invalid role");
+//   }
+
+//   await newUser.save();
+//   return newUser;
+// };
+
+// export const loginUser = async ({ email, password }, res) => {
+
+//   const user = new User({
+//     name,
+//     email,
+//     password,
+//     role,
+//     profileImage,
+//     ...(role === 'pharmacy' && { address, phone, location , licenseNumber})
+
+//   });
+
+//   await user.save();
+//   return user;
+
+
+// };
+
 
 export const createUser = async ({
   name,
@@ -18,26 +105,23 @@ export const createUser = async ({
   address,
   phone,
   licenseNumber,
-  operatingHours,
-  is24Hours,
   location,
-  deliveryAddresses,
-  favoritePharmacies,
+  deliveryAddresses = [], // Customer-specific (optional)
+  favoritePharmacies = [] // Customer-specific (optional)
 }) => {
   const existing = await User.findOne({ email });
-  if (existing) throw new ApiError(400, "User already exists");
+  if (existing) throw new ApiError(400, 'User already exists');
 
-  let newUser;
+  // Validate role-specific fields
+  if (role === 'pharmacy' && (!address || !phone || !location?.coordinates)) {
+    throw new ApiError(400, 'Pharmacy must include address, phone, and location');
+  }
 
-  if (role === "pharmacy") {
-    if (!address || !phone || !location?.coordinates) {
-      throw new ApiError(
-        400,
-        "Pharmacy must include address, phone, and location"
-      );
-    }
+  let user;
 
-    newUser = new Pharmacy({
+  // Create the correct discriminator model
+  if (role === 'pharmacy') {
+    user = new Pharmacy({
       name,
       email,
       password,
@@ -46,29 +130,25 @@ export const createUser = async ({
       address,
       phone,
       licenseNumber,
-      operatingHours,
-      is24Hours,
-      location,
+      location
     });
-  } else if (role === "customer") {
-    newUser = new Customer({
+  } else {
+    user = new Customer({
       name,
       email,
       password,
       role,
       profileImage,
       deliveryAddresses,
-      favoritePharmacies,
+      favoritePharmacies
     });
-  } else {
-    throw new ApiError(400, "Invalid role");
   }
 
-  await newUser.save();
-  return newUser;
+  await user.save();
+  return user;
 };
 
-export const loginUser = async ({ email, password }, res) => {
+export const loginUser = async ({ email, password },res) => {
   const user = await User.findOne({ email });
   console.log("This Is The User", user);
   if (!user || !(await user.comparePassword(password))) {

@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import Customer from './Customer.js';
+import Pharmacy from './Pharmacy.js';
 
 const reviewSchema = new mongoose.Schema({
   customer: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },

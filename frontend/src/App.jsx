@@ -1,31 +1,29 @@
-// App.jsx
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-  useNavigate,
-} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { refreshToken, setToken } from "./store/authThunk/authThunk";
+import { useEffect, useRef } from "react";
+import { BrowserRouter, Navigate, Routes,Route } from "react-router-dom";
+import RegisterPage from "./pages/Register/RegisterPage";
+import LoginPage from "./pages/Login/LoginPage";
 import MainLayout from "./layouts/mainLayout";
 import PharmacienLayout from "./layouts/PharmassistLayout/Layout";
-import HomePage from "./pages/Home/HomePage";
-import LoginPage from "./pages/Login/LoginPage";
 import PharmacienDashboard from "./pages/Pharmassist";
-import EditProfile from "./pages/Pharmassist/EditProfile";
-import Medicines from "./pages/Pharmassist/Medicines";
 import Orders from "./pages/Pharmassist/Orders";
 import PharmacistProfile from "./pages/Pharmassist/PharmacistProfile";
-import RegisterPage from "./pages/Register/RegisterPage";
-import { useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { refreshToken, setToken } from "./store/authThunk/authThunk";
+import EditProfile from "./pages/Pharmassist/EditProfile";
+import Medicines from "./pages/Pharmassist/Medicines";
+import Alerts from "./pages/Pharmassist/Alearts";
+ import HomePage from "./pages/Home/HomePage";
+
 import NearbyPharmaciesPage from "./pages/Home/NearbyPharmacies";
 import ProfilePage from "./pages/profile";
 
+
 export default function App() {
   const token = useSelector((state) => state.auth.token);
+  const userRole = useSelector((state) => state.auth.user?.role);
   const dispatch = useDispatch();
   const triedRefresh = useRef(false);
+
   useEffect(() => {
     const tryRefreshToken = async () => {
       try {
@@ -46,32 +44,46 @@ export default function App() {
     <div className="bg-[#ECF6FF] h-full w-full">
       <BrowserRouter>
         <Routes>
-          <Route element={<MainLayout />}>
-            <Route index path="/" element={<HomePage />} />
-            <Route path="/login" element={<RegisterPage />} />
-            <Route path="/register" element={<LoginPage />} />
-            <Route path="/near-pharmacies" element={<NearbyPharmaciesPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+          {/* Public routes */}
+          <Route path="/login" element={<RegisterPage />} />
+          <Route path="/register" element={<LoginPage />} />
+          
+          {/* Client routes */}
+          <Route 
+            path="/" 
+            element={
+              userRole === 'pharmacy' ? 
+                <Navigate to="/pharmacien/dashboard" replace /> : 
+                <MainLayout />
+            }
+          >
+            <Route index element={<HomePage />} />
+            <Route path="near-pharmacies" element={<NearbyPharmaciesPage />} />
+            <Route path="profile" element={<ProfilePage />} />
           </Route>
+          
+          {/* Pharmacist routes - only accessible to pharmacy role */}
+          <Route 
+            path="/pharmacien" 
+            element={
+              userRole === 'pharmacy' ? 
+                <PharmacienLayout /> : 
+                <Navigate to="/" replace />
+            }
+          >
+            <Route index element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<PharmacienDashboard />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="medicaments" element={<Medicines />} />
+            <Route path="myprofile" element={<PharmacistProfile />} />
+            <Route path="edit-profile" element={<EditProfile />} />
+            <Route path="alerts" element={<Alerts />} />
+          </Route>
+          
+          {/* Fallback route */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
-
-      {/* <MainLayout>
-        <HomePage />
-      </MainLayout> */}
-      {/* <BrowserRouter> */}
-      {/* <Routes> */}
-      {/* <Route path="/pharmacien" element={<PharmacienLayout />}>
-      <Route index element={<PharmacienDashboard />} />
-      <Route path="dashboard" element={<PharmacienDashboard />} />
-      <Route path="commandes" element={<Orders />} />
-      <Route path="medicaments" element={<Medicines />} />
-      <Route path="profil" element={<PharmacistProfile />} />
-      <Route path="/pharmacien/profil/edit-profile/:pharmacyId" element={<EditProfile />} />
-      {/* Add other routes */}
-      {/* </Route> */}
-      {/* </Routes> */}
-      {/* </BrowserRouter> */}
     </div>
   );
 }

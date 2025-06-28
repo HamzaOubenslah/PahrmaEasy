@@ -5,6 +5,13 @@ import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 import logger from "./utils/logger.js";
 import authRoute from "./routes/authRoute.js";
+import PharmacyRouter from "./routes/pharmacyRoute.js";
+import Category from "./models/Category.js";
+import OrderItem from "./models/OrderItem.js";
+import Customer from "./models/Customer.js";
+import User from "./models/User.js";
+import Pharmacy from "./models/Pharmacy.js";
+
 
 // Initialize Express app
 const app = express();
@@ -31,6 +38,18 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use("/api/auth", authRoute);
+console.log(Category.collection.name); // Should be 'categories'
+console.log(OrderItem.collection.name);
+console.log(Pharmacy.collection.name);
+
+// console.log(User.find({role:"customer"}));
+
+
+
+
+
+app.use("/api/pharmacy", PharmacyRouter);
+
 
 // Request Logging
 app.use((req, res, next) => {

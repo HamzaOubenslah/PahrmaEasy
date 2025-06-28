@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { User, BookmarkPlus } from "lucide-react";
 import { logout } from "../store/authThunk/authThunk";
 
@@ -11,7 +11,14 @@ const Header = () => {
 
   const dispatch = useDispatch();
   const { token, user } = useSelector((state) => state.auth);
+  const handleLogout = (e) => {
+    e.preventDefault()
+      dispatch(logout())
+      Navigate('/login')
+  }
+  
 
+  
   console.log("This Is The User",user);
   console.log("This Is The Token",token);
   const navItems = [
@@ -96,7 +103,7 @@ const Header = () => {
                   </Link>
                   <button
                     className="w-full text-left flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100"
-                    onClick={() => dispatch(logout())}
+                    onClick={handleLogout}
                   >
                     <svg
                       className="w-4 h-4"

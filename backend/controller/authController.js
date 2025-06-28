@@ -6,7 +6,13 @@ import { getNearbyPharmacies } from "../service/authService.js";
 export const register = asyncHandler(async (req, res) => {
   const profileImage = req.file?.path || "";
 
-  const location = req.body.location;
+  // const location = req.body.location;
+
+  // const location = req.body.location
+  //   ? JSON.parse(req.body.location)  // assuming location sent as stringified object
+  //   : undefined;
+
+    const location = req.body.location || undefined;
 
   const user = await authService.createUser({
     ...req.body,
@@ -16,6 +22,9 @@ export const register = asyncHandler(async (req, res) => {
 
   res.status(201).json(new ApiResponse(201, user, "User Created"));
 });
+
+
+
 
 export const login = asyncHandler(async (req, res) => {
   const { user, access_Token } = await authService.loginUser(req.body, res);
