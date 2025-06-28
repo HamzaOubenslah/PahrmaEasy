@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const medicineSchema = new mongoose.Schema({
   pharmacy: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Pharmacy',
+    ref: 'User',
     required: true 
   },
   name: { type: String, required: true },

@@ -85,3 +85,4 @@ export const findNearbyPharmacies = asyncHandler(async (req, res) => {
       new ApiResponse(200, pharmacies, "Nearby pharmacies fetched successfully")
     );
 });
+
