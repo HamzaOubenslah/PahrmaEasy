@@ -11,6 +11,7 @@ import { createServer } from "http";
 import { initSocket } from "./service/socketService.js";
 
 
+import medicineRoutes from "./routes/medicines.js";
 // Initialize Express app
 const app = express();
 
@@ -41,6 +42,7 @@ app.use(limiter);
 app.use("/api/auth", authRoute);
 app.use("/api/cart", cartRoute);
 app.use("/api/order", orderRoute);
+app.use("/api/medicines", medicineRoutes); 
 
 // Request Logging
 app.use((req, res, next) => {

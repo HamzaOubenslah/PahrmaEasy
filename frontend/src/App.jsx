@@ -22,6 +22,8 @@ import { refreshToken, setToken } from "./store/authThunk/authThunk";
 import NearbyPharmaciesPage from "./pages/Home/NearbyPharmacies";
 import ProfilePage from "./pages/profile";
 import Cart from "./pages/Cart";
+import MedicineDetail from "./pages/Client/MedicineDetail";
+import Medicines from "./pages/Client/Medicines";
 
 export default function App() {
   const token = useSelector((state) => state.auth.token);
@@ -54,6 +56,8 @@ export default function App() {
             <Route path="/near-pharmacies" element={<NearbyPharmaciesPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/medicaments" element={<Medicines />} /> 
+            <Route path="/medicaments/:id" element={<MedicineDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>

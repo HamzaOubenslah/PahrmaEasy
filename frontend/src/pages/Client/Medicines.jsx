@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Search, Plus, Edit2, Trash2, X } from "lucide-react";
-import { MEDICINES, MEDICINE_CATEGORIES, STOCK_STATUS } from "../../constants/Pharmassist";
+import {
+  MEDICINES,
+  MEDICINE_CATEGORIES,
+  STOCK_STATUS,
+} from "../../constants/Pharmassist";
 
 const Medicines = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -13,14 +17,21 @@ const Medicines = () => {
     category: "",
     stock: "",
     price: "",
-    status: STOCK_STATUS.NORMAL
+    status: STOCK_STATUS.NORMAL,
   });
 
-  const allCategories = ["All Categories", ...Object.values(MEDICINE_CATEGORIES)];
+  const allCategories = [
+    "All Categories",
+    ...Object.values(MEDICINE_CATEGORIES),
+  ];
 
-  const filteredMedicines = medicines.filter(medicine => {
-    const matchesSearch = medicine.name.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === "All Categories" || medicine.category === selectedCategory;
+  const filteredMedicines = medicines.filter((medicine) => {
+    const matchesSearch = medicine.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "All Categories" ||
+      medicine.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
@@ -32,15 +43,17 @@ const Medicines = () => {
     };
 
     return (
-      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusClasses[status]}`}>
+      <span
+        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusClasses[status]}`}
+      >
         {status}
       </span>
     );
   };
   console.log(medicines);
-  
+
   const handleDelete = (id) => {
-    setMedicines(medicines.filter(medicine => medicine.id !== id));
+    setMedicines(medicines.filter((medicine) => medicine.id !== id));
   };
 
   const handleEdit = (medicine) => {
@@ -50,7 +63,7 @@ const Medicines = () => {
       category: medicine.category,
       stock: medicine.stock,
       price: medicine.price,
-      status: medicine.status
+      status: medicine.status,
     });
     setIsFormOpen(true);
   };
@@ -62,38 +75,42 @@ const Medicines = () => {
       category: "",
       stock: "",
       price: "",
-      status: STOCK_STATUS.NORMAL
+      status: STOCK_STATUS.NORMAL,
     });
     setIsFormOpen(true);
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (currentMedicine) {
       // Update existing medicine
-      setMedicines(medicines.map(medicine => 
-        medicine.id === currentMedicine.id ? { ...medicine, ...formData } : medicine
-      ));
+      setMedicines(
+        medicines.map((medicine) =>
+          medicine.id === currentMedicine.id
+            ? { ...medicine, ...formData }
+            : medicine
+        )
+      );
     } else {
       // Add new medicine
       const newMedicine = {
         id: `med00${medicines.length + 1}`,
         ...formData,
         stock: parseInt(formData.stock),
-        price: parseFloat(formData.price)
+        price: parseFloat(formData.price),
       };
       setMedicines([...medicines, newMedicine]);
     }
-    
+
     setIsFormOpen(false);
   };
 
@@ -114,17 +131,19 @@ const Medicines = () => {
               <h2 className="text-xl font-bold">
                 {currentMedicine ? "Edit Medicine" : "Add New Medicine"}
               </h2>
-              <button 
+              <button
                 onClick={() => setIsFormOpen(false)}
                 className="text-gray-500 hover:text-gray-700"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -134,9 +153,11 @@ const Medicines = () => {
                   required
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Category
+                </label>
                 <select
                   name="category"
                   value={formData.category}
@@ -145,23 +166,27 @@ const Medicines = () => {
                   required
                 >
                   <option value="">Select a category</option>
-                  {Object.values(MEDICINE_CATEGORIES).map(category => (
-                    <option key={category} value={category}>{category}</option>
+                  {Object.values(MEDICINE_CATEGORIES).map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
                   ))}
                 </select>
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Stock</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Stock
+                </label>
                 <input
                   type="number"
                   name="stock"
                   value={formData.stock}
                   onChange={(e) => {
                     handleInputChange(e);
-                    setFormData(prev => ({
+                    setFormData((prev) => ({
                       ...prev,
-                      status: determineStatus(e.target.value)
+                      status: determineStatus(e.target.value),
                     }));
                   }}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#037847] focus:border-[#037847]"
@@ -169,9 +194,11 @@ const Medicines = () => {
                   required
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Price (€)</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Price (€)
+                </label>
                 <input
                   type="number"
                   name="price"
@@ -183,14 +210,16 @@ const Medicines = () => {
                   required
                 />
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Status
+                </label>
                 <div className="mt-1">
                   <StatusBadge status={formData.status} />
                 </div>
               </div>
-              
+
               <div className="pt-2">
                 <button
                   type="submit"
@@ -207,7 +236,9 @@ const Medicines = () => {
       {/* Main Content */}
       <div className={`${isFormOpen ? "opacity-10 pointer-events-none" : ""}`}>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-          <h1 className="text-3xl font-bold text-gray-900">Medicines Management</h1>
+          <h1 className="text-3xl font-bold text-gray-900">
+            Medicines Management
+          </h1>
           <button
             onClick={handleAdd}
             className="inline-flex items-center px-4 py-2 bg-[#037847] text-white rounded-md shadow-sm transition-colors hover:bg-[#02673e] focus:outline-none focus:ring-2 focus:ring-[#037847] focus:ring-offset-2"
@@ -230,7 +261,7 @@ const Medicines = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          
+
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
@@ -249,29 +280,50 @@ const Medicines = () => {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
                   Name
                 </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
                   Category
                 </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
                   Stock
                 </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
                   Status
                 </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
                   Price
                 </th>
-                <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
                   Actions
                 </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {filteredMedicines.map((medicine) => (
-                <tr key={medicine.id} className="hover:bg-gray-50 transition-colors">
+                <tr
+                  key={medicine.id}
+                  className="hover:bg-gray-50 transition-colors"
+                >
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     {medicine.name}
                   </td>
@@ -288,6 +340,18 @@ const Medicines = () => {
                     €{medicine.price.toFixed(2)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <button
+                      type="button"
+                      class="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-y-75 transition-transform flex"
+                    >
+                      <Link
+                        to={`/medicaments/${medicine.id}`}
+                        className="p-2 text-blue-600 hover:text-blue-900 hover:bg-blue-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        Voir
+                      </Link>
+                    </button>
+
                     <div className="flex justify-end space-x-2">
                       <button
                         onClick={() => handleEdit(medicine)}
