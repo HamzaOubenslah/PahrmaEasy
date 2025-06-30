@@ -8,6 +8,8 @@ export const register = asyncHandler(async (req, res) => {
     req.file.mimetype
   };base64,${req.file.buffer.toString("base64")}`;
 
+  console.log("This Is The req.file In AuthController", req.file);
+
   const location = req.body.location;
 
   const user = await authService.createUser({

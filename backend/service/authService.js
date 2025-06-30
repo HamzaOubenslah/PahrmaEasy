@@ -32,12 +32,32 @@ export const createUser = async ({
   if (existing) throw new ApiError(400, "User already exists");
 
   let newUser;
+  console.log("This Is The Address", address);
+  console.log("This Is The Phone", phone);
 
+  // Parse the location if it's a string
+  if (typeof location === "string") {
+    try {
+      location = JSON.parse(location); // Parse the location string to an object
+    } catch (error) {
+      throw new ApiError(400, "Invalid location format");
+    }
+  }
+
+  console.log("This Is The Location", location); // This should now be an object
+
+  // Ensure location is valid if role is "pharmacy"
   if (role === "pharmacy") {
-    if (!address || !phone || !location?.coordinates) {
+    if (
+      !address ||
+      !phone ||
+      !location ||
+      !location.coordinates ||
+      location.coordinates.length !== 2
+    ) {
       throw new ApiError(
         400,
-        "Pharmacy must include address, phone, and location"
+        "Pharmacy must include address, phone, and valid location (coordinates)"
       );
     }
 
@@ -52,7 +72,10 @@ export const createUser = async ({
       licenseNumber,
       operatingHours,
       is24Hours,
-      location,
+      location: {
+        type: "Point",
+        coordinates: location.coordinates, // Ensure coordinates are passed correctly
+      },
     });
   } else if (role === "customer") {
     newUser = new Customer({
@@ -90,7 +113,7 @@ export const loginUser = async ({ email, password }, res) => {
   }).sort({ createdAt: -1 });
 
   console.log("This Is The User With Notifications", user);
-  console.log("This Is The Notificaations Of The User",notifications);
+  console.log("This Is The Notificaations Of The User", notifications);
   // 2. Verify notifications were populated
   // console.log("User with notifications:", {
   //   _id: user._id,
