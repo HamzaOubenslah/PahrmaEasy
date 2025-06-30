@@ -9,7 +9,7 @@ import {
 import User from "../models/User.js";
 import Pharmacy from "../models/Pharmacy.js";
 import Customer from "../models/Customer.js";
-import { ApiError } from "../utils/ApiError.js";
+import ApiError from "../utils/ApiError.js";
 import jwt from "jsonwebtoken";
 
 jest.mock("../models/User");
