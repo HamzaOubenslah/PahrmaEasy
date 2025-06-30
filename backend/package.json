@@ -15,8 +15,7 @@
     "testMatch": [
       "**/__tests__/**/*.test.js",  
       "**/?(*.)+(spec|test).js"    
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js$"
+    ]
   },
   "keywords": [],
   "author": "",
