@@ -13,7 +13,7 @@ module.exports = {
           '@babel/preset-env',
           {
             targets: { node: 'current' }, // Ensure it's targeting Node.js version
-            modules: 'commonjs', // This is key for Jest to work with CommonJS modules
+            modules: 'module', // This is key for Jest to work with CommonJS modules
           },
         ],
       ],
