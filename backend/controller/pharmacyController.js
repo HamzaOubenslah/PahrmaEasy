@@ -2,6 +2,7 @@ import asyncHandler from '../utils/asyncHandler.js';
 import ApiResponse from '../utils/ApiResponse.js';
 import pharmacyService from '../service/pharmacyService.js';
 import ApiError from '../utils/ApiError.js';
+import Category from '../models/Category.js';
 
 
 // Medicines
@@ -47,9 +48,26 @@ export const deletePharmacyReview = asyncHandler(async (req, res) => {
 });
 
 
+// Dans pharmacyController.js
+ const getCategories = asyncHandler(async (req, res) => {
+  const categories = await Category.find();
+  res.status(200).json(new ApiResponse(200, categories, "Categories retrieved successfully"));
+});
 
+ const createCategory = asyncHandler(async (req, res) => {
+  const category = await Category.create(req.body);
+  res.status(201).json(new ApiResponse(201, category, "Category created successfully"));
+});
+
+ const getPharmacyOrders = asyncHandler(async (req, res) => {
+  const orders = await pharmacyService.getPharmacyOrders(req.user.id);
+  res.status(200).json(new ApiResponse(200, orders, "Orders retrieved successfully"));
+}); 
 export default {
   getPharmacyMedicines,
+  createCategory,
+  getPharmacyOrders ,
+  getCategories , 
   createMedicine,
   updateMedicine,
   removeMedicine,

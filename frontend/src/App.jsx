@@ -21,6 +21,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { refreshToken, setToken } from "./store/authThunk/authThunk";
 import NearbyPharmaciesPage from "./pages/Home/NearbyPharmacies";
 import ProfilePage from "./pages/profile";
+import Reviews from "./pages/Pharmassist/Reviews";
+
 
 export default function App() {
   const token = useSelector((state) => state.auth.token);
@@ -52,6 +54,10 @@ export default function App() {
             <Route path="/register" element={<LoginPage />} />
             <Route path="/near-pharmacies" element={<NearbyPharmaciesPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/medicaments" element={<Medicines />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/dashboard" element={<PharmacienDashboard />} />
+       
           </Route>
         </Routes>
       </BrowserRouter>
@@ -63,9 +69,7 @@ export default function App() {
       {/* <Routes> */}
       {/* <Route path="/pharmacien" element={<PharmacienLayout />}>
       <Route index element={<PharmacienDashboard />} />
-      <Route path="dashboard" element={<PharmacienDashboard />} />
       <Route path="commandes" element={<Orders />} />
-      <Route path="medicaments" element={<Medicines />} />
       <Route path="profil" element={<PharmacistProfile />} />
       <Route path="/pharmacien/profil/edit-profile/:pharmacyId" element={<EditProfile />} />
       {/* Add other routes */}

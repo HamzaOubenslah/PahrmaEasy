@@ -8,6 +8,8 @@ import authRoute from "./routes/authRoute.js";
 import PharmacyRouter from "./routes/pharmacyRoute.js";
 import Medicine from "./models/Medicine.js";
 import Category from "./models/Category.js";
+import Order from "./models/Order.js";
+import OrderItem from "./models/OrderItem.js";
 // Initialize Express app
 const app = express();
 

@@ -15,4 +15,9 @@ PharmacyRouter.delete('/medicines/:medicineId', VerifyToken,pharmacyController.r
 PharmacyRouter.get('/reviews', VerifyToken, pharmacyController.getPharmacyReviews);
 PharmacyRouter.delete('/reviews/:reviewId',VerifyToken,  pharmacyController.deletePharmacyReview);
 
+// Categories routes
+PharmacyRouter.get('/categories', VerifyToken, pharmacyController.getCategories);
+PharmacyRouter.post('/categories', VerifyToken, pharmacyController.createCategory);
+PharmacyRouter.get('/orders', VerifyToken, pharmacyController.getPharmacyOrders);
+
 export default PharmacyRouter;
