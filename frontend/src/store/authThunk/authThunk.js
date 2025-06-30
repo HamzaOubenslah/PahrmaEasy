@@ -1,3 +1,4 @@
+// === authThunk/authThunk.js ===
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -54,14 +55,10 @@ export const getProfile = createAsyncThunk(
   "auth/getProfile",
   async (_, { rejectWithValue }) => {
     try {
-      const token = localStorage.getItem("token"); // or get from Redux
-      console.log("This Is The Token In GetUser Function", token);
+      const token = localStorage.getItem("token");
       const res = await API.get("/profile", {
-        headers: {
-          Authorization: `Bearer ${token}`, // ✅ attach token
-        },
+        headers: { Authorization: `bearer ${token}` },
       });
-      console.log("This Is The Result Of GetUser Thunk", res);
       return res.data;
     } catch (err) {
       return rejectWithValue(
@@ -78,7 +75,7 @@ export const updateProfile = createAsyncThunk(
       const res = await API.post("/profile/edit", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${token}`,
+          Authorization: `bearer ${token}`,
         },
       });
       return res.data;
@@ -95,8 +92,7 @@ export const fetchNearbyPharmacies = createAsyncThunk(
   async ({ lat, lng }, { rejectWithValue }) => {
     try {
       const res = await API.get(`/nearby?lat=${lat}&lng=${lng}`);
-      console.log("This Is The Nears Pharmacies", res);
-      return res.data.data; // Assuming the structure: { data: [...] }
+      return res.data.data;
     } catch (err) {
       return rejectWithValue(
         err.response?.data?.message || "Failed to fetch pharmacies"
@@ -112,6 +108,7 @@ const initialState = {
   loading: false,
   error: null,
   success: false,
+  notifications: JSON.parse(localStorage.getItem("notifications")) || [],
   nearbyPharmacies: [],
 };
 
@@ -121,67 +118,64 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     logout: (state) => {
-      state.user = null;
       state.token = null;
-      localStorage.removeItem("user");
       localStorage.removeItem("token");
+      state.notifications = null;
+      localStorage.removeItem("notifications");
     },
     setToken: (state, action) => {
       const { token, user } = action.payload;
       state.token = token;
       if (user) state.user = user;
-
       localStorage.setItem("token", token);
       if (user) localStorage.setItem("user", JSON.stringify(user));
+    },
+    removeNotification: (state, action) => {
+      console.log(
+        "This Is The Type Of Type Notification",
+        typeof state.notifications
+      );
+      console.log("This Is The Notification", state.notifications);
+      state.notifications = state.notifications.filter(
+        (n) => n._id !== action.payload
+      );
     },
   },
   extraReducers: (builder) => {
     builder
-      // ===== REGISTER =====
       .addCase(registerUser.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(registerUser.fulfilled, (state, action) => {
+      .addCase(registerUser.fulfilled, (state) => {
         state.loading = false;
-        // state.user = action.payload.user;
-        // state.token = action.payload.token;
         state.success = true;
-        // localStorage.setItem("user", JSON.stringify(action.payload.user));
-        // localStorage.setItem("token", action.payload.token);
       })
       .addCase(registerUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
         state.success = false;
       })
-
-      // ===== LOGIN =====
       .addCase(loginUser.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
-        const { user, access_Token } = action.payload.data.data;
-        console.log("This Is The Access_Token If Login FulFilled",access_Token);
-        console.log("This Is The user If Login FulFilled",user);
-        console.log("This Is The Payload In The Login FulFilled",action.payload);
+        const { user, access_Token, notifications } = action.payload.data.data;
+        console.log("This Is The Notifications Of This User", notifications);
         state.loading = false;
         state.user = user;
         state.token = access_Token;
-        // state.success = true;
-
+        state.notifications = notifications;
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("token", access_Token);
+        localStorage.setItem("notifications", JSON.stringify(notifications));
       })
-
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
         state.success = false;
       })
-
-      // ===== REFRESH TOKEN =====
       .addCase(refreshToken.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -189,23 +183,18 @@ const authSlice = createSlice({
       .addCase(refreshToken.fulfilled, (state, action) => {
         state.loading = false;
         state.token = action.payload.token;
-        if (action.payload.user) {
-          state.user = action.payload.user;
-        }
+        if (action.payload.user) state.user = action.payload.user;
         localStorage.setItem("token", action.payload.token);
       })
       .addCase(refreshToken.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
-
-      // ===== GET PROFILE =====
       .addCase(getProfile.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
       .addCase(getProfile.fulfilled, (state, action) => {
-        console.log("This is The Payload In GetUser", action.payload);
         state.loading = false;
         state.user = action.payload.data;
       })
@@ -213,14 +202,11 @@ const authSlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-
-      // ===== UPDATE PROFILE =====
       .addCase(updateProfile.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
       .addCase(updateProfile.fulfilled, (state, action) => {
-        console.log("This Is The Payload After Uofdate The User",action.payload);
         state.loading = false;
         state.user = action.payload.data;
         state.success = true;
@@ -246,5 +232,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { logout, setToken } = authSlice.actions;
+export const { logout, setToken, removeNotification } = authSlice.actions;
 export default authSlice.reducer;

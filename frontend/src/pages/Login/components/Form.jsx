@@ -13,8 +13,9 @@ const Form = () => {
     address: "",
     phone: "",
   });
+  const [image, setImage] = useState(null); // New state to store the image file
   const navigate = useNavigate();
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const [coordinates, setCoordinates] = useState({
     latitude: null,
     longitude: null,
@@ -50,6 +51,14 @@ const Form = () => {
     }));
   };
 
+  // New handleImageChange function
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage(file); // Store the image file in state
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -63,7 +72,7 @@ const Form = () => {
       email: data.email,
       password: data.password,
       role: data.role,
-      profileImage: null, // Add image upload logic if needed
+      profileImage: image, // Attach the image to userData
     };
 
     if (data.role === "pharmacy") {
@@ -79,8 +88,27 @@ const Form = () => {
         coordinates: [coordinates.latitude, coordinates.longitude],
       };
     }
-    console.log("This Is The USERDATE", userData.location);
-    dispatch(registerUser(userData));
+
+    console.log("This Is The USERDATA", userData);
+
+    // If you're sending the data to an API, you may need to use FormData to handle the image
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("password", data.password);
+    formData.append("role", data.role);
+    formData.append("profileImage", image);
+
+    if (data.role === "pharmacy") {
+      formData.append("address", data.address);
+      formData.append("phone", data.phone);
+      formData.append("location", JSON.stringify(userData.location)); // Send location as an object
+    }
+
+    // Call your registerUser action with formData instead of userData directly
+    dispatch(registerUser(formData));
+
+    // Redirect to login page
     navigate('/login');
   };
 
@@ -188,6 +216,16 @@ const Form = () => {
           placeholder="Confirmer le mot de passe"
           className="w-full border border-gray-300 p-2 rounded"
           required
+        />
+      </div>
+
+      {/* Image Upload Field */}
+      <div className="mb-4">
+        <input
+          type="file"
+          name="profileImage"
+          onChange={handleImageChange}
+          className="w-full border border-gray-300 p-2 rounded"
         />
       </div>
 

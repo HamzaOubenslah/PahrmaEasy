@@ -5,6 +5,10 @@ import jwt from "jsonwebtoken";
 import ApiError from "../utils/ApiError.js";
 import Order from "../models/Order.js";
 import Review from "../models/Review.js";
+import dotenv from "dotenv";
+import Notification from "../models/Notification.js";
+
+dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET || "your_secret_key";
 const JWT_REFRESH = process.env.JWT_REFRESH || "your_refresh_key";
@@ -28,12 +32,32 @@ export const createUser = async ({
   if (existing) throw new ApiError(400, "User already exists");
 
   let newUser;
+  console.log("This Is The Address", address);
+  console.log("This Is The Phone", phone);
 
+  // Parse the location if it's a string
+  if (typeof location === "string") {
+    try {
+      location = JSON.parse(location); // Parse the location string to an object
+    } catch (error) {
+      throw new ApiError(400, "Invalid location format");
+    }
+  }
+
+  console.log("This Is The Location", location); // This should now be an object
+
+  // Ensure location is valid if role is "pharmacy"
   if (role === "pharmacy") {
-    if (!address || !phone || !location?.coordinates) {
+    if (
+      !address ||
+      !phone ||
+      !location ||
+      !location.coordinates ||
+      location.coordinates.length !== 2
+    ) {
       throw new ApiError(
         400,
-        "Pharmacy must include address, phone, and location"
+        "Pharmacy must include address, phone, and valid location (coordinates)"
       );
     }
 
@@ -48,7 +72,10 @@ export const createUser = async ({
       licenseNumber,
       operatingHours,
       is24Hours,
-      location,
+      location: {
+        type: "Point",
+        coordinates: location.coordinates, // Ensure coordinates are passed correctly
+      },
     });
   } else if (role === "customer") {
     newUser = new Customer({
@@ -69,35 +96,66 @@ export const createUser = async ({
 };
 
 export const loginUser = async ({ email, password }, res) => {
-  const user = await User.findOne({ email });
-  console.log("This Is The User", user);
+  // 1. Find user and explicitly select password for comparison
+  const user = await User.findOne({ email })
+    .select("+password")
+    .populate({
+      path: "notifications",
+      options: { sort: { createdAt: -1 } }, // Newest first
+    });
+
   if (!user || !(await user.comparePassword(password))) {
     throw new ApiError(401, "Invalid credentials");
   }
 
-  const access_Token = jwt.sign({ id: user._id, role: user.role }, JWT_SECRET, {
-    expiresIn: "1d",
-  });
+  const notifications = await Notification.find({
+    $or: [{ customer: user._id }, { pharmacy: user._id }],
+  }).sort({ createdAt: -1 });
+
+  console.log("This Is The User With Notifications", user);
+  console.log("This Is The Notificaations Of The User", notifications);
+  // 2. Verify notifications were populated
+  // console.log("User with notifications:", {
+  //   _id: user._id,
+  //   notificationCount: user.notifications?.length,
+  //   sampleNotification: user.notifications?.[0],
+  // });
+
+  // 3. Generate tokens
+  const access_Token = jwt.sign(
+    { id: user._id, role: user.role },
+    process.env.JWT_SECRET,
+    { expiresIn: "1d" }
+  );
 
   const refresh_Token = jwt.sign(
     { id: user._id, role: user.role },
-    JWT_REFRESH,
-    {
-      expiresIn: "7d",
-    }
+    process.env.JWT_REFRESH,
+    { expiresIn: "7d" }
   );
 
+  // 4. Set cookie
   res.cookie("refreshToken", refresh_Token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production", // send only over HTTPS in production
-    sameSite: "Strict", // or "Lax" depending on your use-case
-    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "Strict",
+    maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 
-  return { user, access_Token };
+  // 5. Remove sensitive data before returning
+  const userWithoutPassword = user.toObject();
+  delete userWithoutPassword.password;
+
+  return {
+    user: userWithoutPassword,
+    access_Token,
+    notifications, // Ensure array is returned
+  };
 };
 
 export const getUserProfile = async (userId) => {
+  console.log("This Is The UserId In GetUser Function", userId);
+
   const user = await User.findById(userId).select("-password");
   if (!user) throw new ApiError(404, "User not found");
 
