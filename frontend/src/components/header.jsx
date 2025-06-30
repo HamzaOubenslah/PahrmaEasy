@@ -29,9 +29,9 @@ const Header = () => {
   useEffect(() => {
     const stored = localStorage.getItem("notifications");
     console.log("This Is The Notification", stored);
-    const removedIds = JSON.parse(
-      localStorage.getItem("removedNotificationIds")
-    );
+    const removedIds = localStorage.getItem("removedNotificationIds")
+      ? JSON.parse(localStorage.getItem("removedNotificationIds"))
+      : [];
 
     if (stored) {
       try {

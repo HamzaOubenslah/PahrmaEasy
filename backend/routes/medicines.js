@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const controller = require('../controllers/medicineController');
+import * as controller from '../controller/medicineController.js';
 
 router.get('/', controller.getAllMedicines);
 router.post('/', controller.addMedicine);
 
-module.exports = router;
+export default router;

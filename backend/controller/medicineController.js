@@ -1,6 +1,6 @@
-const Medicine = require('../models/Medicine');
+import Medicine from '../models/Medicine.js';
 
-exports.getAllMedicines = async (req, res) => {
+export const getAllMedicines = async (req, res) => {
   try {
     const { search, category } = req.query;
     let query = {};
@@ -19,7 +19,7 @@ exports.getAllMedicines = async (req, res) => {
   }
 };
 
-exports.addMedicine = async (req, res) => {
+export const addMedicine = async (req, res) => {
   try {
     const medicine = new Medicine(req.body);
     await medicine.save();

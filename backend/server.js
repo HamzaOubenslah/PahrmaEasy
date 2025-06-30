@@ -1,6 +1,7 @@
 import logger from "./utils/logger.js";
 import connectDB from "./config/database.js";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
+import dotenv from 'dotenv';
 import { httpServer } from "./app.js";
 
 dotenv.config();

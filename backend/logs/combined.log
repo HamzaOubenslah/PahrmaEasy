@@ -2145,3 +2145,6 @@
 {"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 17:00:09.537"}
 {"level":"info","message":"Environment: development","timestamp":"2025-06-30 17:00:09.540"}
 {"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-30 17:06:05.341"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 21:27:37.776"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 21:27:37.819"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 21:27:37.822"}

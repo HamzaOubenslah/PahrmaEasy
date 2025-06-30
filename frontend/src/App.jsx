@@ -12,7 +12,7 @@ import HomePage from "./pages/Home/HomePage";
 import LoginPage from "./pages/Login/LoginPage";
 import PharmacienDashboard from "./pages/Pharmassist";
 import EditProfile from "./pages/Pharmassist/EditProfile";
-import Medicines from "./pages/Pharmassist/Medicines";
+// import Medicines from "./pages/Pharmassist/Medicines";
 import Orders from "./pages/Pharmassist/Orders";
 import PharmacistProfile from "./pages/Pharmassist/PharmacistProfile";
 import RegisterPage from "./pages/Register/RegisterPage";

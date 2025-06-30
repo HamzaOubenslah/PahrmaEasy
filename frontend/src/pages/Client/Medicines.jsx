@@ -5,6 +5,7 @@ import {
   MEDICINE_CATEGORIES,
   STOCK_STATUS,
 } from "../../constants/Pharmassist";
+import { Link } from "react-router-dom";
 
 const Medicines = () => {
   const [searchQuery, setSearchQuery] = useState("");
