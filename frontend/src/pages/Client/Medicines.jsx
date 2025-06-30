@@ -256,9 +256,13 @@ const Medicines = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
+<<<<<<< HEAD:frontend/src/pages/Client/Medicines.jsx
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Name
                 </label>
+=======
+                <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+>>>>>>> 2cfc4af2996a60704a7769739eff99e038f674ab:frontend/src/pages/Pharmassist/Medicines.jsx
                 <input
                   type="text"
                   name="name"
