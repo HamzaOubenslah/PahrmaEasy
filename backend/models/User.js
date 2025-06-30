@@ -1,18 +1,25 @@
+import mongoose from "mongoose";
+import bcrypt from "bcrypt";
 
-
-import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
-
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
-  role: { type: String, enum: ['customer', 'pharmacy'], required: true },
-  profileImage: { type: String, default: '' }
-}, { 
-  timestamps: true,
-  discriminatorKey: 'role'
-});
+const userSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, unique: true, required: true },
+    password: { type: String, required: true },
+    role: { type: String, enum: ["customer", "pharmacy"], required: true },
+    profileImage: { type: String, default: "" },
+    notifications: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Notification",
+      },
+    ],
+  },
+  {
+    timestamps: true,
+    discriminatorKey: "role",
+  }
+);
 
 // Hash password before saving
 userSchema.pre("save", async function (next) {
@@ -26,6 +33,5 @@ userSchema.methods.comparePassword = function (candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 export default User;

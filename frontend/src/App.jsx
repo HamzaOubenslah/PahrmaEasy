@@ -23,6 +23,7 @@ import NearbyPharmaciesPage from "./pages/Home/NearbyPharmacies";
 import ProfilePage from "./pages/profile";
 import Reviews from "./pages/Pharmassist/Reviews";
 
+import Cart from "./pages/Cart";
 
 export default function App() {
   const token = useSelector((state) => state.auth.token);
@@ -58,6 +59,7 @@ export default function App() {
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/dashboard" element={<PharmacienDashboard />} />
        
+            <Route path="/cart" element={<Cart />} />
           </Route>
         </Routes>
       </BrowserRouter>
