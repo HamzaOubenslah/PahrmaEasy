@@ -10,6 +10,9 @@
     "test:coverage": "jest --coverage",
     "dev": "nodemon server.js"
   },
+  "jest": {
+    "extensionsToTreatAsEsm": [".js"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
