@@ -11,14 +11,10 @@
     "dev": "nodemon server.js"
   },
   "jest": {
-    "testEnvironment": "node",
     "transform": {
-      "^.+\\.js$": "babel-jest"
+      "^.+\\.[t|j]sx?$": "babel-jest"
     },
-    "testMatch": [
-      "**/__tests__/**/*.test.js",
-      "**/?(*.)+(spec|test).js"
-    ]
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
