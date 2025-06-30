@@ -2026,3 +2026,7 @@
 {"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:56:09.851"}
 {"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:56:09.896"}
 {"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:56:09.898"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 05:01:19.824"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 05:01:19.904"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 05:01:19.907"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-30 05:04:26.347"}
