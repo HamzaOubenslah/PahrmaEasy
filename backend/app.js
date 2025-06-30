@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 import logger from "./utils/logger.js";
 import authRoute from "./routes/authRoute.js";
-
+import medicineRoutes from "./routes/medicines.js";
 // Initialize Express app
 const app = express();
 
@@ -31,6 +31,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use("/api/auth", authRoute);
+app.use("/api/medicines", medicineRoutes); 
 
 // Request Logging
 app.use((req, res, next) => {
