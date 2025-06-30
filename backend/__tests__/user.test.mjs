@@ -1,10 +1,16 @@
-const mongoose = require("mongoose");
-const { register, login, getProfile, updateProfile, findNearbyPharmacies } = require("../controller/authController");
-const User = require("../models/User");
-const Pharmacy = require("../models/Pharmacy");
-const Customer = require("../models/Customer");
-const { ApiError } = require("../utils/ApiError");
-const jwt = require("jsonwebtoken");
+import mongoose from "mongoose";
+import {
+  register,
+  login,
+  getProfile,
+  updateProfile,
+  findNearbyPharmacies,
+} from "../controller/authController.js"; // Note: .js extension is required in ESM
+import User from "../models/User.js";
+import Pharmacy from "../models/Pharmacy.js";
+import Customer from "../models/Customer.js";
+import { ApiError } from "../utils/ApiError.js";
+import jwt from "jsonwebtoken";
 
 jest.mock("../models/User");
 jest.mock("../models/Pharmacy");
