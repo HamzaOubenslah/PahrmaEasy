@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../../store/authThunk/authThunk"; // adjust path as needed
+import { loginUser, logout } from "../../../store/authThunk/authThunk"; // adjust path as needed
 import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth);
   const navigate = useNavigate();
-
+  // const [userRole,setUserRole] = useState(user.role)
   const [data, setData] = useState({
+
     email: "",
     motDePasse: "",
   });
+useEffect(()=> {
+dispatch(logout())
+},[dispatch])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,9 +33,19 @@ const RegisterForm = () => {
         password: data.motDePasse, // match what backend expects
       })
     ).unwrap();
+    // console.log('this is user ',userRole);
+    
     console.log("This The Result",result)
+    console.log('this is role',result.data.data.user.role);
+    
     if (result.success) {
-      navigate("/");
+      if(result.data.data.user.role === 'pharmacy'){
+        navigate("/pharmacien");
+      }
+      else {
+        //to change / to home page route 
+        navigate('/')
+      }
     }
   };
 

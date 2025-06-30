@@ -9,7 +9,7 @@ export const navItems = [
   {
     titre: "Commandes",
     icone: ShoppingCart,
-    lien: "commandes",
+    lien: "Orders",
   },
   {
     titre: "Médicaments",
@@ -24,7 +24,7 @@ export const navItems = [
   {
     titre: "Mon Profil",
     icone: UserRound,
-    lien: "profil",
+    lien: "myprofile",
   }
 ];
 
@@ -52,10 +52,11 @@ export const COLORS = ['#037847', '#0d9488', '#34a853', '#8b5cf6', '#d946ef'];
 
 // Order Status Types
 export const ORDER_STATUS = {
-  PENDING: 'Pending',
-  VALIDATED: 'Validated',
-  CANCELLED: 'Cancelled',
-  DELIVERED: 'Delivered'
+  pending: 'pending',
+  shipped: 'shipped',
+  delivered: 'delivered',
+  cancelled:'cancelled'
+
 };
 
 // Medicine Stock Status
