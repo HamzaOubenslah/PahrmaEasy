@@ -1,3 +1,9 @@
+import React, { useEffect, useState } from "react";
+import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, Navigate } from "react-router-dom";
+import { User, BookmarkPlus } from "lucide-react";
+import { logout } from "../store/authThunk/authThunk";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +28,17 @@ const Header = () => {
   console.log("This Is The UserDropDownOpen", userDropdownOpen);
 
   const dispatch = useDispatch();
+  const { token, user } = useSelector((state) => state.auth);
+  const handleLogout = (e) => {
+    e.preventDefault()
+      dispatch(logout())
+      Navigate('/login')
+  }
+  
+
+  
+  console.log("This Is The User",user);
+  console.log("This Is The Token",token);
   const { token, user, notifications } = useSelector((state) => state.auth);
   const socket = useSocket(user?._id);
 
@@ -160,6 +177,24 @@ const Header = () => {
                     className="relative"
                     onClick={handleNotificationClick}
                   >
+                    <User size={16} /> Profil
+                  </Link>
+                  <Link
+                    to="/bookmarks"
+                    className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100"
+                  >
+                    <BookmarkPlus size={16} /> Favoris
+                  </Link>
+                  <button
+                    className="w-full text-left flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100"
+                    onClick={handleLogout}
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
                     <Bell className="h-5 w-5" />
                     {localNotification.length > 0 && (
                       <span className="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500 rounded-full">

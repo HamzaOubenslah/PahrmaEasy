@@ -10,8 +10,95 @@ import Notification from "../models/Notification.js";
 
 dotenv.config();
 
+
+// import User from '../models/User.js';
+// import jwt from 'jsonwebtoken';
+// import ApiError from '../utils/ApiError.js';
+// import Pharmacy from '../models/Pharmacy.js';
+// import Customer from '../models/Customer.js';
+
 const JWT_SECRET = process.env.JWT_SECRET || "your_secret_key";
 const JWT_REFRESH = process.env.JWT_REFRESH || "your_refresh_key";
+
+// export const createUser = async ({
+//   name,
+//   email,
+//   password,
+//   role,
+//   profileImage,
+//   address,
+//   phone,
+//   licenseNumber,
+//   operatingHours,
+//   is24Hours,
+//   location,
+//   deliveryAddresses,
+//   favoritePharmacies,
+
+//   location
+// }) => {
+//   const existing = await User.findOne({ email });
+//   if (existing) throw new ApiError(400, "User already exists");
+
+//   let newUser;
+
+//   if (role === "pharmacy") {
+//     if (!address || !phone || !location?.coordinates) {
+//       throw new ApiError(
+//         400,
+//         "Pharmacy must include address, phone, and location"
+//       );
+//     }
+
+//     newUser = new Pharmacy({
+//       name,
+//       email,
+//       password,
+//       role,
+//       profileImage,
+//       address,
+//       phone,
+//       licenseNumber,
+//       operatingHours,
+//       is24Hours,
+//       location,
+//     });
+//   } else if (role === "customer") {
+//     newUser = new Customer({
+//       name,
+//       email,
+//       password,
+//       role,
+//       profileImage,
+//       deliveryAddresses,
+//       favoritePharmacies,
+//     });
+//   } else {
+//     throw new ApiError(400, "Invalid role");
+//   }
+
+//   await newUser.save();
+//   return newUser;
+// };
+
+// export const loginUser = async ({ email, password }, res) => {
+
+//   const user = new User({
+//     name,
+//     email,
+//     password,
+//     role,
+//     profileImage,
+//     ...(role === 'pharmacy' && { address, phone, location , licenseNumber})
+
+//   });
+
+//   await user.save();
+//   return user;
+
+
+// };
+
 
 export const createUser = async ({
   name,
@@ -22,15 +109,19 @@ export const createUser = async ({
   address,
   phone,
   licenseNumber,
-  operatingHours,
-  is24Hours,
   location,
-  deliveryAddresses,
-  favoritePharmacies,
+  deliveryAddresses = [], // Customer-specific (optional)
+  favoritePharmacies = [] // Customer-specific (optional)
 }) => {
   const existing = await User.findOne({ email });
-  if (existing) throw new ApiError(400, "User already exists");
+  if (existing) throw new ApiError(400, 'User already exists');
 
+  // Validate role-specific fields
+  if (role === 'pharmacy' && (!address || !phone || !location?.coordinates)) {
+    throw new ApiError(400, 'Pharmacy must include address, phone, and location');
+  }
+
+  let user;
   let newUser;
   console.log("This Is The Address", address);
   console.log("This Is The Phone", phone);
@@ -61,7 +152,9 @@ export const createUser = async ({
       );
     }
 
-    newUser = new Pharmacy({
+  // Create the correct discriminator model
+  if (role === 'pharmacy') {
+    user = new Pharmacy({
       name,
       email,
       password,
@@ -77,24 +170,25 @@ export const createUser = async ({
         coordinates: location.coordinates, // Ensure coordinates are passed correctly
       },
     });
-  } else if (role === "customer") {
-    newUser = new Customer({
+  } else {
+    user = new Customer({
       name,
       email,
       password,
       role,
       profileImage,
       deliveryAddresses,
-      favoritePharmacies,
+      favoritePharmacies
     });
-  } else {
-    throw new ApiError(400, "Invalid role");
   }
 
-  await newUser.save();
-  return newUser;
+  await user.save();
+  return user;
 };
 
+export const loginUser = async ({ email, password },res) => {
+  const user = await User.findOne({ email });
+  console.log("This Is The User", user);
 export const loginUser = async ({ email, password }, res) => {
   // 1. Find user and explicitly select password for comparison
   const user = await User.findOne({ email })
