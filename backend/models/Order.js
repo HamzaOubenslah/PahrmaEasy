@@ -7,6 +7,7 @@ const orderSchema = new mongoose.Schema({
   status: { type: String, enum: ['pending', 'shipped', 'delivered'], default: 'pending' },
   totalPrice: Number,
   ordonance:String,
+//   orderItems : [{ type: mongoose.Schema.Types.ObjectId, ref: 'OrderItem' }]
   orderItems:[orderItemSchema]
 
 }, { timestamps: true });

@@ -507,6 +507,126 @@
 {"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-27 21:42:46.512"}
 {"level":"info","message":"Server running on port 5001","timestamp":"2025-06-27 21:42:46.548"}
 {"level":"info","message":"Environment: development","timestamp":"2025-06-27 21:42:46.549"}
+
+{"cause":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-aof489l-shard-00-00.ggxdfit.mongodb.net:27017":{"$clusterTime":null,"address":"ac-aof489l-shard-00-00.ggxdfit.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":231602710,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-aof489l-shard-00-01.ggxdfit.mongodb.net:27017":{"$clusterTime":null,"address":"ac-aof489l-shard-00-01.ggxdfit.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":231602952,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-aof489l-shard-00-02.ggxdfit.mongodb.net:27017":{"$clusterTime":null,"address":"ac-aof489l-shard-00-02.ggxdfit.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":231602491,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-84g224-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"errorLabelSet":{},"level":"error","message":"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-aof489l-shard-00-00.ggxdfit.mongodb.net:27017":{"$clusterTime":null,"address":"ac-aof489l-shard-00-00.ggxdfit.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":231602710,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-aof489l-shard-00-01.ggxdfit.mongodb.net:27017":{"$clusterTime":null,"address":"ac-aof489l-shard-00-01.ggxdfit.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":231602952,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-aof489l-shard-00-02.ggxdfit.mongodb.net:27017":{"$clusterTime":null,"address":"ac-aof489l-shard-00-02.ggxdfit.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":231602491,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-84g224-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (C:\\Users\\Lenovo\\OneDrive\\Bureau\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\connection.js:1165:11)\n    at NativeConnection.openUri (C:\\Users\\Lenovo\\OneDrive\\Bureau\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\connection.js:1096:11)\n    at async connectDB (file:///C:/Users/Lenovo/OneDrive/Bureau/PahrmaEasy/backend/config/database.js:100:5)\n    at async startServer (file:///C:/Users/Lenovo/OneDrive/Bureau/PahrmaEasy/backend/server.js:9:5)","timestamp":"2025-06-28 01:51:52.174"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 01:59:14.743"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 01:59:14.833"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 01:59:14.835"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-28 02:00:04.764"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:31:42.253"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 12:31:42.878"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:31:42.895"}
+{"level":"info","message":"POST /api/pharmacy/medecines","timestamp":"2025-06-28 12:41:35.289"}
+{"level":"info","message":"GET /api/pharmacy/medecines","timestamp":"2025-06-28 12:41:40.755"}
+{"level":"info","message":"GET /api/pharmacy/medicines","timestamp":"2025-06-28 12:41:53.670"}
+{"level":"info","message":"GET /api/pharmacy/medicines","timestamp":"2025-06-28 12:42:00.817"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:45:46.843"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 12:45:46.956"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:45:46.959"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:46:40.049"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 12:46:40.198"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:46:40.207"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:50:07.080"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 12:50:07.302"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:50:07.307"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:50:37.296"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 12:50:37.506"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:50:37.531"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:56:28.322"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-28 12:56:28.461"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:56:28.490"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 16:32:12.430"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 16:32:12.525"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 16:32:12.527"}
+{"level":"info","message":"GET /api/pharmacy/medicines/686163cd49b9d3b4b48a366d","timestamp":"2025-06-29 17:07:42.087"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2025-06-29 17:07:42.478"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 17:19:44.231"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 17:19:44.312"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 17:19:44.315"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 17:21:29.629"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 17:21:29.692"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 17:21:29.694"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 17:24:21.672"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 17:24:21.788"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 17:24:21.798"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:07:16.291"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:07:16.351"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:07:16.357"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:07:23.899"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:07:23.961"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:07:23.966"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:08:07.769"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:08:07.848"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:08:07.853"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:08:20.956"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:08:21.025"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:08:21.030"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:08:48.669"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:08:48.757"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:08:48.777"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:09:02.866"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:09:02.983"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:09:02.989"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:09:39.496"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:09:39.576"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:09:39.587"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:11:41.817"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:11:41.860"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:11:41.861"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:14:39.916"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-29 18:14:39.985"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:14:39.987"}
+{"level":"info","message":"GET /api/pharmacy/medicines/686163cd49b9d3b4b48a366d","timestamp":"2025-06-29 22:15:12.877"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:24:50.133"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 02:24:50.216"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:24:50.225"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:24:57.244"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 02:24:57.335"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:24:57.338"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/stats","timestamp":"2025-06-30 02:25:19.506"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/sales/weekly","timestamp":"2025-06-30 02:25:19.863"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/medicines/categories","timestamp":"2025-06-30 02:25:19.871"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/orders/recent","timestamp":"2025-06-30 02:25:19.881"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/stats","timestamp":"2025-06-30 02:25:22.087"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/sales/weekly","timestamp":"2025-06-30 02:25:22.107"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/medicines/categories","timestamp":"2025-06-30 02:25:22.142"}
+{"level":"info","message":"GET /api/pharmacy/pharmacy/orders/recent","timestamp":"2025-06-30 02:25:22.166"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 16:33:20.798"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 16:33:21.008"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 16:33:21.012"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 16:33:56.540"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 16:33:56.792"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 16:33:56.808"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 16:44:02.299"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 16:44:02.408"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 16:44:02.411"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 16:45:30.669"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 16:45:30.775"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 16:45:30.781"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 16:46:06.329"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 16:46:06.488"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 16:46:06.502"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 16:59:15.948"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 16:59:16.021"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 16:59:16.023"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 17:01:24.622"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 17:01:24.705"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 17:01:24.708"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-30 17:18:55.434"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 17:25:31.532"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 17:25:31.653"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 17:25:31.655"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 17:36:50.530"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 17:36:50.594"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 17:36:50.596"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 17:41:52.779"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 17:41:52.850"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 17:41:52.851"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-30 17:51:57.666"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 17:53:15.819"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-06-30 17:53:15.920"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 17:53:15.925"}
+=======
 {"level":"info","message":"GET /api/pharmacies/nearby","timestamp":"2025-06-27 22:51:53.575"}
 {"level":"info","message":"GET /api/pharmacies/nearby","timestamp":"2025-06-27 22:52:26.129"}
 {"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-27 22:56:12.250"}
