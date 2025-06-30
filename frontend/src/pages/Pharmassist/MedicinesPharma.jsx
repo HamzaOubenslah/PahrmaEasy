@@ -10,7 +10,7 @@ import {
   createCategory,
 } from "../../store/pharmacyThunk";
 
-const Medicines = () => {
+const MedicinesPharma = () => {
   const dispatch = useDispatch();
   const { medicines, categories, loading, error } = useSelector((state) => state.pharmacy);
   const [searchQuery, setSearchQuery] = useState("");

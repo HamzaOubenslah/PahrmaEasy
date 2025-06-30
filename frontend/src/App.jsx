@@ -12,7 +12,7 @@ import HomePage from "./pages/Home/HomePage";
 import LoginPage from "./pages/Login/LoginPage";
 import PharmacienDashboard from "./pages/Pharmassist";
 import EditProfile from "./pages/Pharmassist/EditProfile";
-import Medicines from "./pages/Pharmassist/Medicines";
+import MedicinesPharma from "./pages/Pharmassist/MedicinesPharma";
 import Orders from "./pages/Pharmassist/Orders";
 import PharmacistProfile from "./pages/Pharmassist/PharmacistProfile";
 import RegisterPage from "./pages/Register/RegisterPage";
@@ -55,7 +55,7 @@ export default function App() {
             <Route path="/register" element={<LoginPage />} />
             <Route path="/near-pharmacies" element={<NearbyPharmaciesPage />} />
             <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/medicaments" element={<Medicines />} />
+            <Route path="/medicaments" element={<MedicinesPharma />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/dashboard" element={<PharmacienDashboard />} />
        
