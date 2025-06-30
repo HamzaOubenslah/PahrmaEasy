@@ -507,3 +507,1522 @@
 {"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-27 21:42:46.512"}
 {"level":"info","message":"Server running on port 5001","timestamp":"2025-06-27 21:42:46.548"}
 {"level":"info","message":"Environment: development","timestamp":"2025-06-27 21:42:46.549"}
+{"level":"info","message":"GET /api/pharmacies/nearby","timestamp":"2025-06-27 22:51:53.575"}
+{"level":"info","message":"GET /api/pharmacies/nearby","timestamp":"2025-06-27 22:52:26.129"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-27 22:56:12.250"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-27 22:56:12.289"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-27 22:56:12.291"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-27 23:01:11.583"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-27 23:01:11.659"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-27 23:01:11.686"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 11:59:49.747"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 11:59:50.336"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 11:59:50.337"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:22:26.422"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 12:22:26.478"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:22:26.483"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:22:47.155"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 12:22:47.229"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:22:47.231"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 12:22:53.810"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 12:22:53.856"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 12:22:53.859"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 13:26:23.646"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 13:26:23.713"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 13:26:23.716"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 13:26:30.515"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 13:26:30.583"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 13:26:30.588"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 14:47:51.048"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 14:47:51.089"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 14:47:51.091"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 14:50:47.910"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 14:50:47.963"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 14:50:47.964"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 14:50:54.617"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 14:50:54.668"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 14:50:54.671"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 14:50:58.264"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 14:50:58.311"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 14:50:58.313"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 14:51:08.673"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 14:51:08.710"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 14:51:08.712"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 14:51:50.464"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 14:51:50.499"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 14:51:50.501"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:05:05.707"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:05:05.754"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:05:05.756"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:05:18.774"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:05:18.811"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:05:18.813"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:05:31.936"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:05:32.049"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:05:32.051"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:05:38.569"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:05:38.648"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:05:38.652"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:05:46.943"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:05:47.009"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:05:47.013"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:06:01.802"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:06:01.856"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:06:01.858"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:06:22.114"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:06:22.166"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:06:22.168"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:06:35.368"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:06:35.422"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:06:35.424"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:06:49.564"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:06:49.611"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:06:49.613"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:06:55.957"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:06:56.003"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:06:56.005"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:02.523"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:07:02.584"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:07:02.586"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:05.875"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:07:05.929"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:07:05.930"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:11.220"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:07:11.289"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:07:11.291"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:43.142"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:07:43.216"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:07:43.218"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:47.647"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:51.231"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:07:51.332"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:07:51.337"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:07:56.814"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:07:56.873"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:07:56.875"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:08:00.964"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:08:01.019"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:08:01.021"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:08:06.367"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:08:06.421"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:08:06.424"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:08:13.850"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:08:13.911"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:08:13.914"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:08:27.722"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:08:27.778"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:08:27.780"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:08:33.556"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:08:33.625"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:08:33.627"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:08:46.577"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:08:46.624"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:08:46.626"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:09:04.935"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:09:04.970"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:09:04.972"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:09:10.620"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:09:10.703"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:09:10.710"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:09:14.126"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:09:14.197"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:09:14.199"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:09:26.732"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:09:26.771"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:09:26.773"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:10:07.675"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:10:07.723"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:10:07.726"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 15:10:22.735"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 15:10:22.777"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 15:10:22.778"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 16:16:04.856"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 16:16:04.892"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 16:16:04.895"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 16:38:08.104"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 16:38:08.157"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 16:38:08.159"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:00:17.100"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:00:17.268"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:00:17.295"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:00:35.840"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:00:35.882"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:00:35.884"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:01:40.800"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:01:40.836"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:01:40.838"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:02:09.629"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:02:09.681"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:02:09.682"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:02:33.468"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:02:33.540"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:02:33.542"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:05.643"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:05.708"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:05.709"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:17.971"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:18.038"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:18.061"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:21.577"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:21.625"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:21.628"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:45.845"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:45.905"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:45.906"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:51.731"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:51.777"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:51.779"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:55.699"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:55.754"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:55.757"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:03:59.700"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:03:59.741"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:03:59.744"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 17:04:15.633"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 17:04:15.707"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 17:04:15.711"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 18:59:08.985"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 18:59:09.027"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 18:59:09.029"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:44:48.979"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:44:49.042"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:44:49.046"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:53:12.978"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:53:13.015"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:53:13.017"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-28 19:53:35.566"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:54:01.160"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:54:01.198"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:54:01.200"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-28 19:54:08.373"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:54:20.315"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:54:20.353"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:54:20.358"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-28 19:54:58.690"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:55:12.237"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:55:12.278"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:55:12.280"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:55:31.256"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:55:31.324"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:55:31.326"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:56:20.811"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:56:20.853"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:56:20.856"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:56:33.866"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:56:33.921"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:56:33.924"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:59:42.044"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:59:42.128"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:59:42.130"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:59:47.033"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:59:47.149"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:59:47.153"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 19:59:57.034"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 19:59:57.081"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 19:59:57.083"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:00:01.305"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:00:01.354"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:00:01.356"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:00:22.044"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:00:22.115"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:00:22.117"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:00:46.431"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:00:46.476"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:00:46.478"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:00:55.856"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:00:55.908"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:00:55.911"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:05:36.595"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:05:36.631"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:05:36.634"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:05:44.524"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:05:44.570"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:05:44.573"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:05:51.180"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:05:51.231"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:05:51.234"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:05:55.550"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:05:55.591"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:05:55.594"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:06:05.571"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:06:05.607"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:06:05.609"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:06:38.751"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:06:38.828"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:06:38.837"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:06:44.227"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:06:44.278"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:06:44.281"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:06:54.833"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:06:54.875"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:06:54.879"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:07:33.319"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:07:33.447"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:07:33.464"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:08:19.992"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:08:20.030"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:08:20.033"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:11:38.680"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:11:38.729"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:11:38.731"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:11:43.196"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:11:43.273"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:11:43.276"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:11:52.296"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:11:52.353"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:11:52.356"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:12:01.051"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:12:01.105"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:12:01.107"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:12:08.688"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:12:08.736"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:12:08.739"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:14:00.535"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:14:00.665"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:14:00.698"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:14:16.135"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:14:16.196"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:14:16.199"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:15:33.708"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:15:33.753"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:15:33.756"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:15:38.123"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:15:38.159"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:15:38.161"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:16:49.052"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:16:49.095"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:16:49.097"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:18:30.128"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:18:30.181"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:18:30.183"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:49:48.296"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:49:48.440"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:49:48.566"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:49:58.189"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:50:55.541"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:50:55.619"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:50:55.622"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:51:12.700"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:51:12.744"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:51:12.746"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:51:23.848"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:51:23.918"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:51:23.929"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:51:35.075"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:51:49.820"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:51:49.859"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:51:49.862"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:54:35.149"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:54:35.204"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:54:35.206"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:55:15.178"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:55:15.217"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:55:15.291"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:55:32.692"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:55:32.760"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:55:32.764"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:56:19.360"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:56:19.429"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:56:19.431"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:58:37.504"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:58:37.568"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:58:37.571"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:58:55.125"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:58:55.165"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:58:55.168"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 20:59:20.165"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 20:59:20.201"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 20:59:20.204"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:00:17.840"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:00:17.887"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:00:17.891"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:03:29.701"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:03:29.742"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:03:29.744"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:03:58.033"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:03:58.138"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:03:58.146"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:04:09.886"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:04:09.938"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:04:09.940"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:04:17.740"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:04:17.795"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:04:17.800"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:04:21.351"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:04:21.443"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:04:21.446"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:04:35.370"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:04:35.421"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:04:35.424"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:07:15.956"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:07:15.995"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:07:15.998"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:07:34.689"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:07:34.783"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:07:34.786"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:12:26.119"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:12:26.205"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:12:26.208"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:12:39.074"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:12:39.119"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:12:39.122"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:12:45.874"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:12:45.923"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:12:45.928"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:13:50.791"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:13:50.841"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:13:50.844"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:50:54.813"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:50:54.866"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:50:54.873"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:52:25.959"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:52:26.000"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:52:26.002"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:52:32.725"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:52:32.777"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:52:32.781"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:52:39.467"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:52:39.536"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:52:39.558"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:52:52.439"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:52:52.487"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:52:52.490"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:52:56.301"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:52:56.391"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:52:56.394"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:53:14.987"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:53:15.065"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:53:15.087"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:53:44.672"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:53:44.775"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:53:44.779"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:53:49.043"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:53:49.104"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:53:49.107"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:53:55.564"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:53:55.617"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:53:55.620"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:54:09.756"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:54:09.877"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:54:09.883"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:54:15.603"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:54:15.671"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:54:15.673"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:55:01.232"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:55:01.267"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:55:01.270"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:55:11.881"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:55:11.941"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:55:11.944"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:55:21.224"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:55:21.270"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:55:21.276"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:55:58.748"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:55:58.803"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:55:58.805"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:56:34.668"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:56:34.714"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:56:34.717"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:56:59.832"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:56:59.868"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:56:59.871"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:57:37.199"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:57:37.238"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:57:37.240"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:58:07.374"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:58:07.448"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:58:07.485"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 21:58:20.032"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 21:58:20.129"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 21:58:20.164"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:00:28.545"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:00:28.585"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:00:28.588"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:00:51.040"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:00:51.091"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:00:51.094"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:01:42.206"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:01:42.257"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:01:42.261"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:01:48.561"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:01:48.611"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:01:48.616"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:02:07.931"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:02:08.017"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:02:08.021"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:02:12.578"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:02:12.695"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:02:12.736"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-28 22:13:00.553"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-28 22:13:00.604"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-28 22:13:00.611"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2025-06-29 00:07:00.743"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 00:08:17.025"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 00:08:17.076"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 00:08:17.078"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 00:08:22.350"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 00:08:22.416"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 00:08:22.419"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 00:08:30.693"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 00:08:30.797"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 00:08:30.830"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 00:09:26.971"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 00:09:27.011"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 00:09:27.016"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 01:32:48.212"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:28:00.363"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:28:00.400"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:28:00.402"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:43:19.520"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:43:19.572"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:43:19.575"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:43:28.621"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:43:28.710"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:43:28.771"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:43:34.077"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:43:34.122"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:43:34.124"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:43:44.192"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:43:44.245"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:43:44.248"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:45:14.953"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:45:15.001"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:45:15.003"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:45:22.694"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:45:26.566"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:45:26.624"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:45:26.626"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:45:32.288"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:45:32.326"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:45:32.329"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:45:42.203"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:45:42.242"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:45:42.245"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 12:46:03.899"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:46:32.341"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:46:32.387"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:46:32.390"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:46:45.117"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:46:45.153"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:46:45.155"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:47:34.050"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:47:34.114"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:47:34.116"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:47:40.769"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:47:40.811"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:47:40.814"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:47:44.463"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:47:44.542"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:47:44.548"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:47:48.905"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:47:48.959"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:47:48.962"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:47:56.491"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:47:56.556"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:47:56.558"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:48:04.249"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:48:04.286"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:48:04.288"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:48:12.624"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:48:12.666"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:48:12.668"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:48:22.475"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:48:22.516"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:48:22.521"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:48:27.474"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:48:27.521"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:48:27.524"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:48:31.284"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:48:31.363"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:48:31.365"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:48:36.063"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:48:36.121"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:48:36.123"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:49:05.491"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:49:05.554"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:49:05.559"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:49:11.346"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:49:11.405"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:49:11.410"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:49:14.764"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:49:14.803"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:49:14.805"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:49:22.139"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:49:22.174"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:49:22.177"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:49:42.173"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:49:42.212"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:49:42.215"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:49:52.529"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:49:52.569"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:49:52.571"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:50:08.460"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:50:08.520"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:50:08.523"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:50:12.063"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:50:12.106"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:50:12.108"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:50:33.386"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:50:33.442"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:50:33.444"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:50:38.820"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:50:38.861"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:50:38.866"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:05.517"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:05.575"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:05.578"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:13.448"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:13.489"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:13.491"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:23.806"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:23.911"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:23.931"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:26.829"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:26.877"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:26.880"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:32.184"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:32.248"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:32.252"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:47.328"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:47.386"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:47.484"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:51:54.509"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:51:54.579"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:51:54.589"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:52:00.007"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:52:00.083"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:52:00.086"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:52:21.908"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:52:21.949"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:52:21.953"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:52:30.433"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:52:30.471"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:52:30.474"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:52:44.847"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:52:44.905"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:52:44.907"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:52:51.193"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:52:51.266"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:52:51.269"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:52:58.742"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:52:58.809"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:52:58.814"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:53:08.824"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:53:08.943"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:53:09.023"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:53:14.105"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:53:14.156"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:53:14.159"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:53:22.605"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:53:22.652"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:53:22.654"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:53:28.588"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:53:28.626"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:53:28.629"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:53:42.086"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:53:42.124"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:53:42.127"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:53:52.396"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:53:52.437"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:53:52.439"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:54:28.963"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:54:29.016"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:54:29.020"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:54:32.864"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:54:32.899"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:54:32.902"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:54:39.268"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:54:39.315"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:54:39.318"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:54:47.072"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:54:47.125"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:54:47.127"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:00.109"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:00.175"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:00.179"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:12.961"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:13.036"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:13.055"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:19.778"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:19.824"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:19.826"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:24.513"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:24.555"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:24.559"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:32.910"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:32.949"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:32.952"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:45.640"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:45.692"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:45.694"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:55:57.803"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:55:57.865"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:55:57.872"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:56:11.506"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:56:11.576"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:56:11.579"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:56:16.311"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:56:16.353"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:56:16.355"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:57:08.318"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:57:08.362"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:57:08.364"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:57:14.713"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:57:14.786"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:57:14.804"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:57:18.684"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:57:18.723"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:57:18.725"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:57:37.671"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:57:37.720"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:57:37.738"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:58:12.427"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:58:12.471"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:58:12.474"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:58:43.102"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:58:43.140"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:58:43.143"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 12:58:59.807"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 12:58:59.855"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 12:58:59.858"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:00:26.402"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:00:26.439"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:00:26.442"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:00:52.672"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:00:52.748"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:00:52.755"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:00:56.477"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:00:56.513"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:00:56.516"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:01:05.984"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:01:06.025"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:01:06.030"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:01:22.051"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:01:22.112"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:01:22.114"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:01:37.828"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:01:37.920"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:01:37.923"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:01:53.589"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:01:53.625"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:01:53.628"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:03:44.356"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:03:44.444"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:03:44.447"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:04:04.871"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 13:04:09.048"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 13:04:09.124"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 13:04:09.128"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:42:28.549"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:42:28.630"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:42:28.632"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:50:41.358"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:50:41.413"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:50:41.418"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:50:57.678"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:50:57.733"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:50:57.736"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:51:05.810"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:51:05.858"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:51:05.860"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:51:29.855"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:51:29.896"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:51:29.899"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:51:36.563"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:51:36.632"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:51:36.636"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:51:50.642"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:51:50.780"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:51:50.783"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:52:03.134"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:52:03.180"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:52:03.182"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:52:17.432"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:52:17.485"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:52:17.488"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:52:21.702"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:52:21.778"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:52:21.782"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:52:35.701"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:52:35.770"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:52:35.777"}
+{"level":"error","message":"Unhandled Rejection: Cannot populate path `Notification` because it is not in your schema. Set the `strictPopulate` option to false to override.","path":"Notification","stack":"StrictPopulateError: Cannot populate path `Notification` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\model.js:4439:21)\n    at Function.populate (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\model.js:4406:21)\n    at model.populate (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\document.js:4610:24)\n    at Module.loginUser (file:///C:/Users/PC/Desktop/Pharmacy_pfe/PahrmaEasy/backend/service/authService.js:77:15)\n    at async file:///C:/Users/PC/Desktop/Pharmacy_pfe/PahrmaEasy/backend/controller/authController.js:23:34","timestamp":"2025-06-29 14:52:49.568"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:53:14.189"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:53:14.269"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:53:14.272"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:53:25.606"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:53:25.654"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:53:25.656"}
+{"level":"error","message":"Unhandled Rejection: Cannot populate path `Notification` because it is not in your schema. Set the `strictPopulate` option to false to override.","path":"Notification","stack":"StrictPopulateError: Cannot populate path `Notification` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:50:12)\n    at _populatePath (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\model.js:4439:21)\n    at Function.populate (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\model.js:4406:21)\n    at model.populate (C:\\Users\\PC\\Desktop\\Pharmacy_pfe\\PahrmaEasy\\backend\\node_modules\\mongoose\\lib\\document.js:4610:24)\n    at Module.loginUser (file:///C:/Users/PC/Desktop/Pharmacy_pfe/PahrmaEasy/backend/service/authService.js:76:15)\n    at async file:///C:/Users/PC/Desktop/Pharmacy_pfe/PahrmaEasy/backend/controller/authController.js:23:34","timestamp":"2025-06-29 14:53:37.397"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:54:39.147"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:54:39.189"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:54:39.191"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:56:21.145"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:56:21.186"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:56:21.189"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:56:32.629"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:56:32.675"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:56:32.678"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:56:45.440"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:56:45.480"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:56:45.485"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:57:19.381"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:57:19.433"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:57:19.436"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:57:33.194"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:57:33.266"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:57:33.269"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:57:37.015"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:57:37.058"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:57:37.060"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:57:43.669"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:57:43.730"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:57:43.735"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:57:50.412"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:57:50.465"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:57:50.469"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:58:01.974"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:58:02.054"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:58:02.057"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:58:07.737"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:58:07.788"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:58:07.791"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 14:59:04.537"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:59:12.439"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:59:12.490"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:59:12.494"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 14:59:56.304"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 14:59:56.347"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 14:59:56.349"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:00:06.151"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:00:06.207"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:00:06.209"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:00:10.196"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:00:10.270"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:00:10.273"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:00:25.587"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:00:25.726"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:00:25.858"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:00:39.652"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:00:39.705"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:00:39.708"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:02:32.067"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:02:32.188"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:02:32.204"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:03:29.336"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:03:29.386"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:03:29.389"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:11:57.731"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:11:57.791"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:11:57.793"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:12:10.627"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:12:10.668"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:12:10.672"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:15:29.096"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:15:29.185"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:15:29.194"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:15:39.629"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:15:39.697"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:15:39.699"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:15:58.040"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:15:58.095"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:15:58.097"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:16:07.079"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:16:07.137"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:16:07.142"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:16:54.100"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:16:54.222"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:16:54.303"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:16:59.111"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:16:59.173"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:16:59.176"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:17:08.390"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:17:08.442"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:17:08.444"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:17:18.492"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:17:18.529"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:17:18.532"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:17:29.328"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:17:29.377"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:17:29.380"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:17:34.888"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:17:34.932"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:17:34.935"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:17:45.587"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:17:45.638"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:17:45.640"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:18:28.549"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:18:28.598"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:18:28.602"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:18:37.171"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:18:37.242"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:18:37.246"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:19:32.340"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:19:32.379"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:19:32.382"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:20:10.972"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:20:11.019"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:20:11.021"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:20:29.538"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:20:29.601"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:20:29.609"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:24:43.899"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:24:43.951"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:24:43.954"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:24:55.038"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:24:55.112"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:24:55.114"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:25:01.902"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:25:01.940"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:25:01.942"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:27:15.864"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:27:15.909"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:27:15.912"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:28:40.011"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:28:40.061"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:28:40.065"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:29:02.272"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:29:02.318"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:29:02.322"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 15:29:55.772"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:30:04.939"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:30:04.974"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:30:04.977"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:32:27.624"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:32:27.677"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:32:27.682"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:52:35.341"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:52:35.381"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:52:35.383"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:53:39.028"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:53:39.074"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:53:39.077"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:53:56.179"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:53:56.244"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:53:56.247"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:54:06.461"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:54:06.498"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:54:06.501"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:54:33.487"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:54:33.551"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:54:33.554"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:55:09.148"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:55:09.192"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:55:09.195"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 15:55:19.595"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:55:24.314"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:55:24.355"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:55:24.358"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:55:55.368"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:55:55.420"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:55:55.424"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:56:01.468"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:56:01.510"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:56:01.513"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:56:10.845"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:56:10.909"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:56:10.912"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:56:22.167"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:56:22.229"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:56:22.231"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:56:50.854"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:56:50.892"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:56:50.894"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:57:03.862"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:57:03.908"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:57:03.910"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 15:57:14.529"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:57:19.481"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:57:19.518"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:57:19.521"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:57:38.558"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:57:38.631"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:57:38.634"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:59:00.500"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:59:00.554"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:59:00.556"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 15:59:10.365"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 15:59:10.412"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 15:59:10.414"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 17:49:19.676"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 17:49:19.756"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 17:49:19.760"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 17:55:15.813"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 17:55:15.880"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 17:55:15.884"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:01:05.534"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:01:05.606"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:01:05.608"}
+{"level":"info","message":"POST /api/order/create-orderr","timestamp":"2025-06-29 18:01:23.513"}
+{"level":"info","message":"POST /api/order/create-orderr","timestamp":"2025-06-29 18:01:38.770"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:06:56.219"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:06:56.286"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:06:56.288"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:07:06.677"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:07:06.763"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:07:06.766"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:07:16.205"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:07:16.251"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:07:16.254"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:07:32.610"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:07:32.677"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:07:32.681"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:07:50.689"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:07:50.728"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:07:50.731"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:08:40.859"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:08:40.899"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:08:40.902"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:18:45.093"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:18:47.208"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:18:50.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:18:53.225"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:18:58.910"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:00.212"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:03.453"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:06.216"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:12.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:26.840"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:28.228"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:31.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:35.492"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:41.217"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:47.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:53.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:19:59.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:05.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:11.224"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:17.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:22.432"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:27.795"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:33.208"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:39.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:44.936"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:50.024"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:20:55.043"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:00.056"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:05.076"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:10.095"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:15.105"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:20.120"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:25.139"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:30.150"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:35.167"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:39.460"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:39.462"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:40.915"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:43.463"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:48.507"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:53.530"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:21:58.551"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:03.571"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:08.593"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:13.615"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:18.638"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:23.655"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:28.672"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:33.694"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:38.717"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:43.736"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:48.756"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:53.777"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:22:58.800"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:03.822"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:08.844"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:13.868"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:18.894"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:23.915"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:28.940"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:33.962"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:38.982"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:43.996"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:49.012"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:54.030"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:23:59.204"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:05.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:11.209"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:17.207"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:23.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:28.209"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:33.218"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:39.211"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:45.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:51.206"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:24:57.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:03.226"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:08.252"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:13.601"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:14.936"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:17.242"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:23.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:29.207"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:34.222"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:37.327"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:37.947"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:39.258"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:41.603"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:46.614"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:51.623"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:25:56.631"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:02.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:08.211"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:14.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:20.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:26.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:32.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:38.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:43.267"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:48.290"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:53.333"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:26:58.451"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:03.462"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:09.208"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:15.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:22.195"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:28.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:33.233"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:36.883"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:38.591"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:39.968"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:45.003"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:50.014"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:27:55.208"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:01.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:07.216"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:13.212"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:19.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:25.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:31.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:37.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:42.220"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:45.372"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:46.542"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:49.564"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:53.397"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:28:58.405"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:00.532"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:01.888"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:04.629"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:08.216"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:13.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:19.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:25.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:31.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:37.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:43.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:49.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:29:55.199"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:01.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:07.199"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:13.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:19.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:25.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:31.199"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:37.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:43.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:49.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:30:54.215"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:31:00.503"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:31:06.199"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-29 18:34:12.192"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:34:28.929"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:34:28.967"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:34:28.971"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:34:29.215"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:34:35.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:34:41.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:34:47.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:34:53.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:34:59.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:05.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:11.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:17.208"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:22.232"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:25.343"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:27.003"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:28.773"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:33.214"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:38.049"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:43.323"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:44.068"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:46.792"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:47.898"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:49.655"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:51.941"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:35:57.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:03.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:09.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:15.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:21.328"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:27.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:33.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:39.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:45.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:51.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:36:57.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:03.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:09.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:15.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:21.295"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:27.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:33.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:39.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:45.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:51.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:37:57.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:03.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:09.237"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:15.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:21.346"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:26.762"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:28.362"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:30.379"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:33.027"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:38.208"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:44.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:50.211"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:38:56.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:01.223"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:07.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:13.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:19.200"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:25.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:31.202"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:39:43.173"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:39:43.230"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:39:43.235"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:39:47.181"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:39:47.237"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:39:47.240"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:47.284"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:39:51.718"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:39:51.755"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:39:51.758"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:52.667"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:39:58.213"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:00.933"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:02.216"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:04.224"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:10.212"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:16.214"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:22.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:28.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:34.204"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:40.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:46.200"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:40:54.432"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:40:54.495"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:40:54.497"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:40:54.596"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:40:58.455"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:40:58.523"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:40:58.525"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:41:02.000"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:41:02.055"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:41:02.057"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:02.222"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:08.229"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:09.943"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:11.204"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:14.204"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:18.203"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:41:28.565"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:41:28.633"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:41:28.636"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:32.634"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:34.212"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:36.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:40.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:46.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:52.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:41:58.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:04.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:10.369"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:16.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:22.286"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:28.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:34.262"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:40.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:46.262"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:52.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:42:58.212"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:04.210"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:10.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:16.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:22.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:28.359"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:34.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:40.203"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:46.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:52.205"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:43:58.219"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:44:27.054"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:44:27.109"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:44:27.112"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:44:28.224"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:44:39.928"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:44:40.010"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:44:40.067"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:44:42.213"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:44:48.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:44:54.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:00.201"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:06.202"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:12.218"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:45:18.664"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:45:18.748"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:45:18.755"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:18.794"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:24.204"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:30.235"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:45:39.318"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:45:39.410"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:45:39.417"}
+{"level":"info","message":"GET /socket.io/","timestamp":"2025-06-29 18:45:39.569"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 18:45:51.253"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 18:45:51.316"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 18:45:51.319"}
+{"level":"info","message":"POST /api/order/add","timestamp":"2025-06-29 18:48:20.385"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-29 21:19:58.029"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-29 21:19:58.115"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-29 21:19:58.118"}
+{"level":"info","message":"GET /api/order/create-order","timestamp":"2025-06-30 00:43:15.513"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:25:19.518"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:25:19.708"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:25:19.710"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:25:28.849"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:25:28.902"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:25:28.905"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:26:05.029"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:26:05.099"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:26:05.103"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:26:11.699"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:26:11.778"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:26:11.780"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:26:27.299"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:26:27.383"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:26:27.386"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:26:49.948"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:26:50.005"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:26:50.007"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:26:54.955"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:26:55.011"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:26:55.015"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:27:04.095"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:27:04.151"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:27:04.153"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:27:46.199"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:27:46.267"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:27:46.275"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:28:11.184"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:28:11.232"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:28:11.234"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:29:12.122"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:29:12.181"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:29:12.183"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:29:33.907"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:29:33.973"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:29:33.978"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:30:11.662"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:30:11.724"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:30:11.726"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:30:40.061"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:30:40.132"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:30:40.136"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:31:58.371"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:31:58.482"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:31:58.530"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:32:35.816"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:32:35.937"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:32:36.023"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:32:44.205"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:32:44.258"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:32:44.261"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:32:52.834"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:32:52.931"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:32:52.958"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:34:52.536"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:34:52.642"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:34:52.725"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 01:59:10.076"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 01:59:10.174"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 01:59:10.189"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:00:22.816"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:00:22.897"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:00:22.914"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:00:34.658"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:00:34.731"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:00:34.734"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:00:42.616"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:00:42.675"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:00:42.677"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:01:37.797"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:01:37.846"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:01:37.848"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:02:34.158"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:02:34.241"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:02:34.247"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:02:48.430"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:02:48.605"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:02:48.611"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:03:05.074"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:03:05.116"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:03:05.121"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:03:45.342"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:03:45.404"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:03:45.407"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:03:57.133"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:03:57.193"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:03:57.195"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:04:29.739"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:04:29.975"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:04:29.980"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:04:55.200"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:04:55.301"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:04:55.308"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:05:04.646"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:05:04.694"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:05:04.696"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:05:19.111"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:05:19.191"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:05:19.194"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:05:34.021"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:05:34.129"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:05:34.132"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:05:55.108"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:05:55.207"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:05:55.221"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:06:04.531"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:06:04.627"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:06:04.630"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:06:13.587"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:06:13.643"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:06:13.645"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:06:20.395"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:06:20.451"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:06:20.453"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:06:42.357"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:06:42.476"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:06:42.480"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:07:26.351"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:07:26.415"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:07:26.418"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:08:01.876"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:08:01.937"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:08:01.939"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:08:13.576"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:08:13.628"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:08:13.631"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:08:25.139"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:08:25.238"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:08:25.244"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:08:59.047"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:08:59.110"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:08:59.113"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:09:08.545"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:09:08.597"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:09:08.600"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:09:40.597"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:09:40.665"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:09:40.668"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:09:46.424"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:09:46.491"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:09:46.495"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:09:53.392"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:09:53.449"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:09:53.453"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:10:46.489"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:10:46.548"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:10:46.550"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:11:54.232"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:11:54.415"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:11:54.567"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:12:22.516"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:12:22.595"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:12:22.599"}
+{"level":"info","message":"PUT /api/cart/update","timestamp":"2025-06-30 02:38:42.165"}
+{"level":"info","message":"PUT /api/cart/update","timestamp":"2025-06-30 02:38:45.796"}
+{"level":"info","message":"PUT /api/cart/update","timestamp":"2025-06-30 02:38:52.147"}
+{"level":"info","message":"PUT /api/cart/update","timestamp":"2025-06-30 02:39:22.154"}
+{"level":"info","message":"PUT /api/cart/update","timestamp":"2025-06-30 02:39:28.250"}
+{"level":"info","message":"PUT /api/cart/update","timestamp":"2025-06-30 02:39:28.856"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:41:05.245"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:41:05.297"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:41:05.300"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:41:52.536"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:41:52.601"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:41:52.605"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:42:05.901"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:42:05.961"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:42:05.964"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:42:13.083"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:42:13.158"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:42:13.169"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:42:58.069"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:42:58.119"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:42:58.126"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:43:34.075"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:43:34.136"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:43:34.138"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:44:39.956"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:44:44.317"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:44:44.414"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:44:44.424"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:45:31.361"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:45:31.420"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:45:31.423"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:46:26.642"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:46:26.681"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:46:26.685"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:48:35.808"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:48:35.849"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:48:35.851"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-06-30 02:49:40.277"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:49:52.497"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:49:52.539"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:49:52.542"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:50:10.374"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:50:10.413"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:50:10.417"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:54:10.883"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:54:10.926"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:54:10.928"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:56:49.389"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:56:49.443"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:56:49.446"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 02:57:37.436"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 02:57:37.494"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 02:57:37.496"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:05:18.887"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:05:18.934"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:05:18.937"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:05:38.877"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:05:38.935"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:05:38.941"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:07:09.610"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:07:09.672"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:07:09.675"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:07:22.186"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:07:22.350"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:07:22.419"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:07:39.430"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:07:39.490"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:07:39.493"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:07:54.738"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:07:54.812"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:07:54.817"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:08:05.926"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:08:05.997"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:08:06.000"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:08:17.815"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:08:18.030"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:08:18.119"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:16:10.526"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:16:10.596"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:16:10.600"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:16:17.859"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:16:17.914"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:16:17.916"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-06-30 03:56:09.851"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-06-30 03:56:09.896"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-30 03:56:09.898"}

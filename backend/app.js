@@ -5,9 +5,17 @@ import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 import logger from "./utils/logger.js";
 import authRoute from "./routes/authRoute.js";
+import orderRoute from "./routes/orderRoute.js";
+import cartRoute from "./routes/cartRoute.js";
+import { createServer } from "http";
+import { initSocket } from "./service/socketService.js";
+
 
 // Initialize Express app
 const app = express();
+
+export const httpServer = createServer(app)
+initSocket(httpServer);
 
 // Security Middleware
 app.use(helmet());
@@ -31,6 +39,8 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use("/api/auth", authRoute);
+app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRoute);
 
 // Request Logging
 app.use((req, res, next) => {

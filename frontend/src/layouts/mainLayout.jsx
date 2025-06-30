@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <Header />
-      <main>
+      <main className="w-full">
         <Outlet />
       </main>
       <Footer />
