@@ -1,7 +1,7 @@
-import app from "./app.js";
 import logger from "./utils/logger.js";
 import connectDB from "./config/database.js";
 import dotenv from "dotenv";
+import { httpServer } from "./app.js";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ const startServer = async () => {
   try {
     await connectDB();
 
-    app.listen(PORT, () => {
+    httpServer.listen(PORT, () => {
       logger.info(`Server running on port ${PORT}`);
       console.log("This Is The Port", PORT);
       logger.info(`Environment: ${process.env.NODE_ENV || "development"}`);
@@ -34,14 +34,14 @@ process.on("SIGINT", () => {
 });
 
 // server.js
-process.on('unhandledRejection', (error) => {
-  logger.error('Unhandled Rejection:', error);
-  console.log('Unhandled Rejection:', error); // 👈 Add this
+process.on("unhandledRejection", (error) => {
+  logger.error("Unhandled Rejection:", error);
+  console.log("Unhandled Rejection:", error); // 👈 Add this
 });
 
-process.on('uncaughtException', (error) => {
-  logger.error('Uncaught Exception:', error);
-  console.log('Uncaught Exception:', error); // 👈 Add this
+process.on("uncaughtException", (error) => {
+  logger.error("Uncaught Exception:", error);
+  console.log("Uncaught Exception:", error); // 👈 Add this
 });
 
 startServer();

@@ -20,10 +20,19 @@ export const register = asyncHandler(async (req, res) => {
 });
 
 export const login = asyncHandler(async (req, res) => {
-  const { user, access_Token } = await authService.loginUser(req.body, res);
+  const { user, access_Token, notifications } = await authService.loginUser(
+    req.body,
+    res
+  );
   res
     .status(200)
-    .json(new ApiResponse(200, { user, access_Token }, "Login Successful"));
+    .json(
+      new ApiResponse(
+        200,
+        { user, access_Token, notifications },
+        "Login Successful"
+      )
+    );
 });
 
 export const getProfile = asyncHandler(async (req, res) => {
@@ -85,4 +94,3 @@ export const findNearbyPharmacies = asyncHandler(async (req, res) => {
       new ApiResponse(200, pharmacies, "Nearby pharmacies fetched successfully")
     );
 });
-

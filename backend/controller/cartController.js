@@ -4,6 +4,7 @@ import ApiError from "../utils/ApiError.js";
 import {
   addToCartService,
   getCartService,
+  updateItemsInCart,
   removeFromCartService,
   clearCartService,
 } from "../service/cartService.js";
@@ -17,17 +18,48 @@ export const addToCartController = asyncHandler(async (req, res, next) => {
 
   res
     .status(200)
-    .json(new ApiResponse(200, updatedCart, "Medicine added to cart successfully"));
+    .json(
+      new ApiResponse(200, updatedCart, "Medicine added to cart successfully")
+    );
 });
 
 // 🛒 Get Cart
 export const getCartController = asyncHandler(async (req, res, next) => {
   const customerId = req.user.id;
 
-  const cart = await getCartService(customerId);
+  const { cart, totalPrice, totalItems } = await getCartService(customerId);
 
-  res.status(200).json(new ApiResponse(200, cart, "Cart fetched successfully"));
+  res
+    .status(200)
+    .json(
+      new ApiResponse(
+        200,
+        { cart, totalPrice, totalItems },
+        "Cart fetched successfully"
+      )
+    );
 });
+
+export const updateItemInCartController = asyncHandler(
+  async (req, res, next) => {
+    const customerId = req.user.id;
+    const { medicineId, quantity } = req.body;
+    const { cart, totalPrice, totalItems } = await updateItemsInCart(
+      customerId,
+      medicineId,
+      quantity
+    );
+    res
+      .status(200)
+      .json(
+        new ApiResponse(
+          200,
+          { cart, totalPrice, totalItems },
+          "Cart Item Updated Successfully"
+        )
+      );
+  }
+);
 
 // ❌ Remove from Cart
 export const removeFromCartController = asyncHandler(async (req, res, next) => {
@@ -38,7 +70,13 @@ export const removeFromCartController = asyncHandler(async (req, res, next) => {
 
   res
     .status(200)
-    .json(new ApiResponse(200, updatedCart, "Medicine removed from cart successfully"));
+    .json(
+      new ApiResponse(
+        200,
+        updatedCart,
+        "Medicine removed from cart successfully"
+      )
+    );
 });
 
 // 🧹 Clear Cart

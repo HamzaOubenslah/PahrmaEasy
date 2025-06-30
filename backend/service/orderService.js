@@ -4,9 +4,13 @@ import Order from "../models/Order.js";
 import Medicine from "../models/Medicine.js";
 import ApiError from "../utils/ApiError.js";
 import { Types } from "mongoose";
+import { sendNotification } from "./socketService.js";
+import { notifyPharmacy } from "./notificationService.js";
 
 export const createOrderFromCartService = async (customerId) => {
-  const cart = await Cart.findOne({ customer: customerId }).populate("items.medicine");
+  const cart = await Cart.findOne({ customer: customerId }).populate(
+    "items.medicine"
+  );
 
   if (!cart || cart.items.length === 0) {
     throw new ApiError(400, "Cart is empty");
@@ -58,6 +62,8 @@ export const createOrderFromCartService = async (customerId) => {
       totalPrice,
       orderItems,
     });
+
+    await notifyPharmacy(pharmacyId, customerId);
 
     const savedOrder = await order.save();
     savedOrders.push(savedOrder);
