@@ -16,6 +16,9 @@ import Alerts from "./pages/Pharmassist/Alearts";
 
 import NearbyPharmaciesPage from "./pages/Home/NearbyPharmacies";
 import ProfilePage from "./pages/profile";
+import Reviews from "./pages/Pharmassist/Reviews";
+
+import Cart from "./pages/Cart";
 
 
 export default function App() {
@@ -60,6 +63,17 @@ export default function App() {
             <Route index element={<HomePage />} />
             <Route path="near-pharmacies" element={<NearbyPharmaciesPage />} />
             <Route path="profile" element={<ProfilePage />} />
+          <Route element={<MainLayout />}>
+            <Route index path="/" element={<HomePage />} />
+            <Route path="/login" element={<RegisterPage />} />
+            <Route path="/register" element={<LoginPage />} />
+            <Route path="/near-pharmacies" element={<NearbyPharmaciesPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/medicaments" element={<Medicines />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/dashboard" element={<PharmacienDashboard />} />
+       
+            <Route path="/cart" element={<Cart />} />
           </Route>
           
           {/* Pharmacist routes - only accessible to pharmacy role */}
@@ -84,6 +98,21 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
+
+      {/* <MainLayout>
+        <HomePage />
+      </MainLayout> */}
+      {/* <BrowserRouter> */}
+      {/* <Routes> */}
+      {/* <Route path="/pharmacien" element={<PharmacienLayout />}>
+      <Route index element={<PharmacienDashboard />} />
+      <Route path="commandes" element={<Orders />} />
+      <Route path="profil" element={<PharmacistProfile />} />
+      <Route path="/pharmacien/profil/edit-profile/:pharmacyId" element={<EditProfile />} />
+      {/* Add other routes */}
+      {/* </Route> */}
+      {/* </Routes> */}
+      {/* </BrowserRouter> */}
     </div>
   );
 }

@@ -4,7 +4,11 @@ import asyncHandler from "../utils/asyncHandler.js";
 import { getNearbyPharmacies } from "../service/authService.js";
 
 export const register = asyncHandler(async (req, res) => {
-  const profileImage = req.file?.path || "";
+  const base64Image = `data:${
+    req.file.mimetype
+  };base64,${req.file.buffer.toString("base64")}`;
+
+  console.log("This Is The req.file In AuthController", req.file);
 
   // const location = req.body.location;
 
@@ -16,7 +20,7 @@ export const register = asyncHandler(async (req, res) => {
 
   const user = await authService.createUser({
     ...req.body,
-    profileImage,
+    profileImage: base64Image,
     location,
   });
 
@@ -27,10 +31,19 @@ export const register = asyncHandler(async (req, res) => {
 
 
 export const login = asyncHandler(async (req, res) => {
-  const { user, access_Token } = await authService.loginUser(req.body, res);
+  const { user, access_Token, notifications } = await authService.loginUser(
+    req.body,
+    res
+  );
   res
     .status(200)
-    .json(new ApiResponse(200, { user, access_Token }, "Login Successful"));
+    .json(
+      new ApiResponse(
+        200,
+        { user, access_Token, notifications },
+        "Login Successful"
+      )
+    );
 });
 
 export const getProfile = asyncHandler(async (req, res) => {
@@ -40,11 +53,13 @@ export const getProfile = asyncHandler(async (req, res) => {
 
 export const updateProfile = asyncHandler(async (req, res) => {
   // Check if a file was uploaded
-  console.log("This Is The Req.file",req.file);
+  console.log("This Is The Req.file", req.file);
   let profileImageBase64 = null;
   if (req.file) {
     // Convert buffer to base64 string with MIME type
-    const base64Image = `data:${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
+    const base64Image = `data:${
+      req.file.mimetype
+    };base64,${req.file.buffer.toString("base64")}`;
     profileImageBase64 = base64Image;
   }
 
@@ -56,7 +71,6 @@ export const updateProfile = asyncHandler(async (req, res) => {
   const user = await authService.updateUser(req.user.id, updateData);
   res.status(200).json(new ApiResponse(200, user, "Profile Updated"));
 });
-
 
 export const handleRefreshToken = asyncHandler(async (req, res) => {
   const { refreshToken } = req.cookies;
@@ -87,5 +101,7 @@ export const findNearbyPharmacies = asyncHandler(async (req, res) => {
 
   res
     .status(200)
-    .json(new ApiResponse(200, pharmacies, "Nearby pharmacies fetched successfully"));
+    .json(
+      new ApiResponse(200, pharmacies, "Nearby pharmacies fetched successfully")
+    );
 });

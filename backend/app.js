@@ -13,8 +13,22 @@ import User from "./models/User.js";
 import Pharmacy from "./models/Pharmacy.js";
 
 
+import PharmacyRouter from "./routes/pharmacyRoute.js";
+import Medicine from "./models/Medicine.js";
+import Category from "./models/Category.js";
+import Order from "./models/Order.js";
+import OrderItem from "./models/OrderItem.js";
+import orderRoute from "./routes/orderRoute.js";
+import cartRoute from "./routes/cartRoute.js";
+import { createServer } from "http";
+import { initSocket } from "./service/socketService.js";
+
+
 // Initialize Express app
 const app = express();
+
+export const httpServer = createServer(app)
+initSocket(httpServer);
 
 // Security Middleware
 app.use(helmet());
@@ -49,6 +63,12 @@ console.log(Pharmacy.collection.name);
 
 
 app.use("/api/pharmacy", PharmacyRouter);
+
+
+app.use("/api/pharmacy", PharmacyRouter);
+
+app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRoute);
 
 
 // Request Logging

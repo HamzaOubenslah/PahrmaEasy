@@ -8,6 +8,7 @@ import VerifyToken from '../middleware/VerifyToken.js';
 import upload from "../config/multer.js";
 
 
+
 const PharmacyRouter = express.Router();
 
 // Apply authentication middleware to all routes
@@ -35,5 +36,19 @@ PharmacyRouter.patch('/change-password', VerifyToken, pharmacyController.changeP
 
 
 PharmacyRouter.get('/medicines', VerifyToken,pharmacyController.getPharmacyMedicines);
+
+// Medicines routes
+PharmacyRouter.get('/medicines', VerifyToken,pharmacyController.getPharmacyMedicines);
+PharmacyRouter.post('/medicines', VerifyToken,pharmacyController.createMedicine);
+PharmacyRouter.put('/medicines/:medicineId',VerifyToken, pharmacyController.updateMedicine);
+PharmacyRouter.delete('/medicines/:medicineId', VerifyToken,pharmacyController.removeMedicine);
+// Reviews routes
+PharmacyRouter.get('/reviews', VerifyToken, pharmacyController.getPharmacyReviews);
+PharmacyRouter.delete('/reviews/:reviewId',VerifyToken,  pharmacyController.deletePharmacyReview);
+
+// Categories routes
+PharmacyRouter.get('/categories', VerifyToken, pharmacyController.getCategories);
+PharmacyRouter.post('/categories', VerifyToken, pharmacyController.createCategory);
+PharmacyRouter.get('/orders', VerifyToken, pharmacyController.getPharmacyOrders);
 
 export default PharmacyRouter;

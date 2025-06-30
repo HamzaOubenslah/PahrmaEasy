@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { orderItemSchema } from './OrderItem.js';
 
 const orderSchema = new mongoose.Schema({
   customer: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
@@ -9,7 +10,13 @@ const orderSchema = new mongoose.Schema({
   payment: { type: String, enum: ['card', 'cash'], required: true },
   totalPrice: Number,
   ordonance:String,
-  orderItems:[{type:mongoose.Schema.Types.ObjectId,ref:'OrderItem'}]
+//   orderItems:[{type:mongoose.Schema.Types.ObjectId,ref:'OrderItem'}]
+  status: { type: String, enum: ['pending', 'shipped', 'delivered'], default: 'pending' },
+  totalPrice: Number,
+  ordonance:String,
+//   orderItems : [{ type: mongoose.Schema.Types.ObjectId, ref: 'OrderItem' }]
+  orderItems:[orderItemSchema]
+
 }, { timestamps: true });
 
 export default mongoose.model('Order', orderSchema);
