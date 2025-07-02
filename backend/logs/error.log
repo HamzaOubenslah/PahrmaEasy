@@ -78,3 +78,9 @@
 {"level":"error","message":"Error: No matching document found for id \"68634c045d9bfcd5031e5657\" version 64 modifiedPaths \"items\"","timestamp":"2025-07-02 15:30:14.782"}
 {"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 2 modifiedPaths \"items\"","timestamp":"2025-07-02 15:43:05.384"}
 {"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 4 modifiedPaths \"items\"","timestamp":"2025-07-02 15:44:47.978"}
+{"level":"error","message":"Error: No matching document found for id \"68634c045d9bfcd5031e5657\" version 66 modifiedPaths \"items\"","timestamp":"2025-07-02 17:41:57.662"}
+{"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 6 modifiedPaths \"items\"","timestamp":"2025-07-02 17:43:48.453"}
+{"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 8 modifiedPaths \"items\"","timestamp":"2025-07-02 17:44:37.254"}
+{"level":"error","message":"Error: Invalid credentials","timestamp":"2025-07-02 23:04:36.418"}
+{"level":"error","message":"Error: Cannot destructure property 'medicineId' of 'req.body' as it is undefined.","timestamp":"2025-07-02 23:24:07.062"}
+{"level":"error","message":"Error: Cannot destructure property 'medicineId' of 'req.body' as it is undefined.","timestamp":"2025-07-02 23:24:07.712"}

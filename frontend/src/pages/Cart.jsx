@@ -73,7 +73,7 @@ const Cart = () => {
           <p className="text-gray-500 mb-6">
             Browse our collection and find something you like
           </p>
-          <Link to="/medicines">
+          <Link to="/medicaments">
             <Button className="gap-2">
               Shop Medicines
               <ArrowRight className="h-4 w-4" />

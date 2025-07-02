@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { addCart } from "../store/cartThunk/cartThunk";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Search, ShoppingCart, Plus, Minus, Frown } from "lucide-react";
 
 const AllMedicines = () => {
   const dispatch = useDispatch();
@@ -20,15 +21,7 @@ const AllMedicines = () => {
     const quantity = quantities[medicine._id] || 1;
     
     if (medicine.stock < quantity) {
-      toast.error(`Only ${medicine.stock} items available in stock`, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "colored"
-      });
+      toast.error(`Only ${medicine.stock} items available in stock`);
       return;
     }
 
@@ -40,25 +33,9 @@ const AllMedicines = () => {
         })
       ).unwrap();
 
-      toast.success(`${quantity} ${medicine.name} added to cart`, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "colored"
-      });
+      toast.success(`${quantity} ${medicine.name} added to cart`);
     } catch (error) {
-      toast.error(`Failed to add ${medicine.name} to cart`, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "colored"
-      });
+      toast.error(`Failed to add ${medicine.name} to cart`);
     }
   };
 
@@ -87,35 +64,22 @@ const AllMedicines = () => {
             placeholder="Search medicines..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#39DB74] focus:border-transparent shadow-sm pl-10"
           />
-          <svg
-            className="absolute right-3 top-3.5 h-5 w-5 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+          <Search className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
         </div>
       </div>
 
       {/* Loading State */}
       {loading && (
         <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#39DB74]"></div>
         </div>
       )}
 
       {/* Error State */}
       {error && (
-        <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded">
+        <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded">
           <p>{error}</p>
         </div>
       )}
@@ -127,10 +91,10 @@ const AllMedicines = () => {
             filteredMedicines.map((medicine) => (
               <div
                 key={medicine._id}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col"
+                className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all border border-gray-100"
               >
                 {/* Medicine Image */}
-                <div className="h-48 bg-gray-200 overflow-hidden">
+                <div className="h-48 bg-gray-100 overflow-hidden">
                   {medicine.image ? (
                     <img
                       src={medicine.image}
@@ -157,28 +121,30 @@ const AllMedicines = () => {
                 </div>
 
                 {/* Medicine Info */}
-                <div className="p-6 flex-grow">
+                <div className="p-6">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-semibold text-gray-800">
                       {medicine.name}
                     </h3>
-                    <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                    <span className="text-[#39DB74] font-medium text-lg">
                       ${medicine.price}
                     </span>
                   </div>
-                  <p className="mt-2 text-gray-600">{medicine.description}</p>
+                  <p className="mt-2 text-gray-600 text-sm line-clamp-2">
+                    {medicine.description}
+                  </p>
 
                   {/* Stock Status */}
                   <div className="mt-3">
                     <span
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
                         medicine.stock > 0
                           ? "bg-green-100 text-green-800"
                           : "bg-red-100 text-red-800"
                       }`}
                     >
                       {medicine.stock > 0
-                        ? `In Stock (${medicine.stock} available)`
+                        ? `In Stock (${medicine.stock})`
                         : "Out of Stock"}
                     </span>
                   </div>
@@ -216,38 +182,14 @@ const AllMedicines = () => {
                               {medicine.pharmacy.name}
                             </Link>
                           </h4>
-                          <div className="flex items-center text-sm text-gray-500 mt-1">
-                            <svg
-                              className="flex-shrink-0 mr-1.5 h-4 w-4"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                            {medicine.pharmacy.address}
-                          </div>
                         </div>
-                      </div>
-                      <div className="mt-3 flex items-center text-sm text-gray-500">
-                        <svg
-                          className="flex-shrink-0 mr-1.5 h-4 w-4"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                        {medicine.pharmacy.phone}
                       </div>
                     </div>
                   )}
 
                   {/* Add to Cart Section */}
                   <div className="mt-6 flex items-center justify-between">
-                    <div className="flex items-center border rounded-md">
+                    <div className="flex items-center border border-gray-200 rounded-lg">
                       <button
                         onClick={() =>
                           handleQuantityChange(
@@ -255,12 +197,12 @@ const AllMedicines = () => {
                             (quantities[medicine._id] || 1) - 1
                           )
                         }
-                        className="w-8 h-8 flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-50 disabled:opacity-50"
                         disabled={(quantities[medicine._id] || 1) <= 1}
                       >
-                        -
+                        <Minus size={14} />
                       </button>
-                      <span className="mx-3 w-8 text-center">
+                      <span className="mx-2 w-8 text-center">
                         {quantities[medicine._id] || 1}
                       </span>
                       <button
@@ -270,37 +212,24 @@ const AllMedicines = () => {
                             (quantities[medicine._id] || 1) + 1
                           )
                         }
-                        className="w-8 h-8 flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-50 disabled:opacity-50"
                         disabled={
                           (quantities[medicine._id] || 1) >= medicine.stock
                         }
                       >
-                        +
+                        <Plus size={14} />
                       </button>
                     </div>
                     <button
                       onClick={() => handleAddToCart(medicine)}
                       disabled={medicine.stock <= 0}
-                      className={`px-4 py-2 rounded-md font-medium text-sm ${
+                      className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
                         medicine.stock > 0
-                          ? "bg-blue-600 text-white hover:bg-blue-700"
+                          ? "bg-[#39DB74] text-white hover:bg-green-600"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      } transition-colors flex items-center`}
+                      } transition-colors`}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
+                      <ShoppingCart size={16} />
                       Add to Cart
                     </button>
                   </div>
@@ -309,25 +238,12 @@ const AllMedicines = () => {
             ))
           ) : (
             <div className="col-span-3 text-center py-12">
-              <svg
-                className="mx-auto h-12 w-12 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              <Frown className="mx-auto h-12 w-12 text-gray-400" />
               <h3 className="mt-2 text-lg font-medium text-gray-900">
                 No medicines found
               </h3>
               <p className="mt-1 text-gray-500">
-                Try adjusting your search or filter to find what you're looking
-                for.
+                Try adjusting your search to find what you're looking for.
               </p>
             </div>
           )}

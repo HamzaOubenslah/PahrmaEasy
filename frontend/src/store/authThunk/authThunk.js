@@ -89,9 +89,9 @@ export const updateProfile = createAsyncThunk(
 
 export const fetchNearbyPharmacies = createAsyncThunk(
   "pharmacy/fetchNearbyPharmacies",
-  async ({ lat, lng }, { rejectWithValue }) => {
+  async ({ latitude, longitude }, { rejectWithValue }) => {
     try {
-      const res = await API.get(`/nearby?lat=${lat}&lng=${lng}`);
+      const res = await API.get(`/nearby?lat=${latitude}&lng=${longitude}`);
       return res.data.data;
     } catch (err) {
       return rejectWithValue(
@@ -222,7 +222,10 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchNearbyPharmacies.fulfilled, (state, action) => {
-        console.log("This Is The FetchNearby Pharmacies Payload",action.payload);
+        console.log(
+          "This Is The FetchNearby Pharmacies Payload",
+          action.payload
+        );
         state.loading = false;
         state.nearbyPharmacies = action.payload;
       })

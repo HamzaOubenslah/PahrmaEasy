@@ -3863,3 +3863,23 @@
 {"level":"error","message":"Error: No matching document found for id \"68634c045d9bfcd5031e5657\" version 64 modifiedPaths \"items\"","timestamp":"2025-07-02 15:30:14.782"}
 {"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 2 modifiedPaths \"items\"","timestamp":"2025-07-02 15:43:05.384"}
 {"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 4 modifiedPaths \"items\"","timestamp":"2025-07-02 15:44:47.978"}
+{"level":"error","message":"Error: No matching document found for id \"68634c045d9bfcd5031e5657\" version 66 modifiedPaths \"items\"","timestamp":"2025-07-02 17:41:57.662"}
+{"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 6 modifiedPaths \"items\"","timestamp":"2025-07-02 17:43:48.453"}
+{"level":"error","message":"Error: No matching document found for id \"68653d6edf7234676c613790\" version 8 modifiedPaths \"items\"","timestamp":"2025-07-02 17:44:37.254"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-07-02 17:50:35.558"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-07-02 17:50:35.597"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-02 17:50:35.599"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-07-02 17:51:18.297"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-07-02 22:47:28.291"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-07-02 22:47:28.352"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-02 22:47:28.355"}
+{"level":"info","message":"SIGINT received. Shutting down gracefully...","timestamp":"2025-07-02 23:01:32.436"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-07-02 23:01:37.744"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-07-02 23:01:37.780"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-02 23:01:37.782"}
+{"level":"info","message":"MongoDB Connected ✅","timestamp":"2025-07-02 23:01:58.704"}
+{"level":"info","message":"Server running on port 5001","timestamp":"2025-07-02 23:01:58.745"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-02 23:01:58.748"}
+{"level":"error","message":"Error: Invalid credentials","timestamp":"2025-07-02 23:04:36.418"}
+{"level":"error","message":"Error: Cannot destructure property 'medicineId' of 'req.body' as it is undefined.","timestamp":"2025-07-02 23:24:07.062"}
+{"level":"error","message":"Error: Cannot destructure property 'medicineId' of 'req.body' as it is undefined.","timestamp":"2025-07-02 23:24:07.712"}
