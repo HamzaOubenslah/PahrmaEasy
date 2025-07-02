@@ -2,14 +2,18 @@
 import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const API_URL = "http://localhost:3000/api/pharmacy";
+const API_URL = "http://localhost:5001/api/pharmacy";
+const API = axios.create({
+  baseURL: API_URL,
+  withCredentials: true,
+});
 
 // Helper function to set headers with token
 const getAuthHeaders = () => {
   const token = localStorage.getItem("token");
   return {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `bearer ${token}`,
     },
   };
 };
@@ -141,13 +145,42 @@ export const fetchPharmacyMedicines = createAsyncThunk(
   }
 );
 
+export const fetchPharmacies=createAsyncThunk(
+  'pharmacy/fetchAllPharmacies',
+  async(_,{rejectWithValue})=>{
+    try {
+      const response=await API.get('/');
+      console.log("This Is The Reponse From Fetch Pharmaes",response)
+      return response.data.data;
+    } catch (error) {
+      return rejectWithValue(error.response?.data?.message || error.message);
+    }
+  }
+)
+
+export const fetchPharmacyDetails = createAsyncThunk(
+  "pharmacy/fetchPharmacyDetails",
+  async (pharmacyId, { rejectWithValue }) => {
+    try {
+      const response = await API.get(`/${pharmacyId}`, getAuthHeaders());
+      return response.data.data; // Return pharmacy data
+    } catch (error) {
+      return rejectWithValue(
+        error.response?.data?.message || "Failed to fetch pharmacy details"
+      );
+    }
+  }
+);
+
 const initialState = {
   orders: [],
   profile: null,
   loading: false,
   error: null,
   success: false,
-  medicines :[]
+  medicines :[],
+  pharmacies: [],
+  pharmacyDetail:null
 };
 
 const pharmacySlice = createSlice({
@@ -245,7 +278,30 @@ const pharmacySlice = createSlice({
       .addCase(fetchPharmacyMedicines.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
+      }).addCase(fetchPharmacies.pending, (state) => {
+        state.loading = true;
       })
+      .addCase(fetchPharmacies.fulfilled, (state, action) => {
+        state.loading = false;
+        state.pharmacies = action.payload;
+        state.error = null;
+      })
+      .addCase(fetchPharmacies.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      }).addCase(fetchPharmacyDetails.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchPharmacyDetails.fulfilled, (state, action) => {
+        console.log("This Is The Pharmacy Details",action.payload)
+        state.loading = false;
+        state.pharmacyDetail = action.payload;
+      })
+      .addCase(fetchPharmacyDetails.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
   },
 });
 

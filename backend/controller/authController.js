@@ -16,7 +16,7 @@ export const register = asyncHandler(async (req, res) => {
   //   ? JSON.parse(req.body.location)  // assuming location sent as stringified object
   //   : undefined;
 
-    const location = req.body.location || undefined;
+  const location = req.body.location || undefined;
 
   const user = await authService.createUser({
     ...req.body,
@@ -26,9 +26,6 @@ export const register = asyncHandler(async (req, res) => {
 
   res.status(201).json(new ApiResponse(201, user, "User Created"));
 });
-
-
-
 
 export const login = asyncHandler(async (req, res) => {
   const { user, access_Token, notifications } = await authService.loginUser(
@@ -98,6 +95,7 @@ export const findNearbyPharmacies = asyncHandler(async (req, res) => {
     longitude: lng,
     maxDistance: maxDistance ? parseInt(maxDistance) : 5000, // optional
   });
+  console.log("This Is Pharmaies", pharmacies);
 
   res
     .status(200)

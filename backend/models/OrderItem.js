@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import Medicine from './Medicine.js';
 // const orderItemSchema = new mongoose.Schema({
 //   // order: { type: mongoose.Schema.Types.ObjectId, ref: 'Order' },
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
 // const orderItemSchema = new mongoose.Schema({
 //   medicine: { type: mongoose.Schema.Types.ObjectId, ref: 'Medicine' },

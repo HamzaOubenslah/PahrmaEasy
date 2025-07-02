@@ -11,24 +11,17 @@ import OrderItem from "./models/OrderItem.js";
 import Customer from "./models/Customer.js";
 import User from "./models/User.js";
 import Pharmacy from "./models/Pharmacy.js";
-
-
-import PharmacyRouter from "./routes/pharmacyRoute.js";
 import Medicine from "./models/Medicine.js";
-import Category from "./models/Category.js";
 import Order from "./models/Order.js";
-import OrderItem from "./models/OrderItem.js";
 import orderRoute from "./routes/orderRoute.js";
 import cartRoute from "./routes/cartRoute.js";
 import { createServer } from "http";
 import { initSocket } from "./service/socketService.js";
-
-
 import medicineRoutes from "./routes/medicines.js";
+
 // Initialize Express app
 const app = express();
-
-export const httpServer = createServer(app)
+export const httpServer = createServer(app);
 initSocket(httpServer);
 
 // Security Middleware
@@ -52,26 +45,12 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+// Routes
 app.use("/api/auth", authRoute);
-console.log(Category.collection.name); // Should be 'categories'
-console.log(OrderItem.collection.name);
-console.log(Pharmacy.collection.name);
-
-// console.log(User.find({role:"customer"}));
-
-
-
-
-
 app.use("/api/pharmacy", PharmacyRouter);
-
-
-app.use("/api/pharmacy", PharmacyRouter);
-
 app.use("/api/cart", cartRoute);
 app.use("/api/order", orderRoute);
-app.use("/api/medicines", medicineRoutes); 
-
+app.use("/api/medicines", medicineRoutes);
 
 // Request Logging
 app.use((req, res, next) => {
@@ -88,5 +67,19 @@ app.get("/health", (req, res) => {
 app.use((req, res) => {
   res.status(404).json({ message: "Not Found" });
 });
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+  logger.error(`Error: ${err.message}`);
+  res.status(500).json({ message: "Internal Server Error" });
+});
+
+// Debugging: Log MongoDB Collection Names
+console.log("Category Collection: ", Category.collection.name); // Should be 'categories'
+console.log("OrderItem Collection: ", OrderItem.collection.name);
+console.log("Pharmacy Collection: ", Pharmacy.collection.name);
+
+// Optionally log the list of customers (if needed for debugging)
+// console.log(User.find({ role: "customer" }));
 
 export default app;

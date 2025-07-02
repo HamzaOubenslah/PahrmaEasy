@@ -5,7 +5,10 @@ const notificationSchema = new mongoose.Schema(
     customer: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     pharmacy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     content: String,
-    type: { type: String, enum: ["Order", "Update", "Stock_Alert"] },
+    type: {
+      type: String,
+      enum: ["Order", "Update", "Stock_Alert", "Ordonance_Upload"],
+    },
     isRead: { type: Boolean, default: false },
   },
   { timestamps: true }

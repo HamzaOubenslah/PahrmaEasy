@@ -1,5 +1,6 @@
 import User from './User.js';
 import mongoose from 'mongoose';
+import Medicine from './Medicine.js';
 
 const pharmacySchema = new mongoose.Schema({
   address: { type: String, required: true },
@@ -13,13 +14,16 @@ const pharmacySchema = new mongoose.Schema({
       enum: ['Point'],
       default: 'Point',
       required: true
-
     },
     coordinates: {
       type: [Number], // [longitude, latitude]
       required: true
     }
-  }
+  },
+  medicines: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Medicine'  // Reference to the Medicine model
+  }]
 });
 
 // Add 2dsphere index for location

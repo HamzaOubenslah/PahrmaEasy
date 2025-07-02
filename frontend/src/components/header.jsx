@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaTimes, FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
-import { User, BookmarkPlus } from "lucide-react";
-import { logout } from "../store/authThunk/authThunk";
-import React, { useState, useEffect } from "react";
-import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { User, BookmarkPlus, Bell } from "lucide-react";
 import { logout, removeNotification } from "../store/authThunk/authThunk";
 import { Button } from "./ui/button";
@@ -24,28 +18,30 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
   const [localNotification, setLocalNotification] = useState([]);
+  let items = useSelector((state) => state.cart.items);
 
-  console.log("This Is The UserDropDownOpen", userDropdownOpen);
 
   const dispatch = useDispatch();
-  const { token, user } = useSelector((state) => state.auth);
-  const handleLogout = (e) => {
-    e.preventDefault()
-      dispatch(logout())
-      Navigate('/login')
-  }
-  
+  const navigate = useNavigate();
 
-  
-  console.log("This Is The User",user);
-  console.log("This Is The Token",token);
   const { token, user, notifications } = useSelector((state) => state.auth);
+  // const { items } = useSelector((state) => state.cart);
+  // console.log("This Is The Items Of Cart In Header", items);
   const socket = useSocket(user?._id);
+
+  // useEffect(() => {
+  //   items = JSON.parse(localStorage.getItem("cart-items"));
+  // }, []);
+
+  // Handle logout and navigate to login page
+  const handleLogout = (e) => {
+    e.preventDefault();
+    dispatch(logout());
+  };
 
   // Restore notifications from localStorage on first render
   useEffect(() => {
     const stored = localStorage.getItem("notifications");
-    console.log("This Is The Notification", stored);
     const removedIds = localStorage.getItem("removedNotificationIds")
       ? JSON.parse(localStorage.getItem("removedNotificationIds"))
       : [];
@@ -57,10 +53,6 @@ const Header = () => {
           const filtered = parsed.filter((n) => !removedIds.includes(n._id));
           setLocalNotification(filtered);
           localStorage.setItem("notifications", JSON.stringify(filtered));
-          console.log(
-            "This Is The Notification After The Filtering",
-            localNotification
-          );
         }
       } catch (err) {
         console.error("Failed to parse notifications from localStorage", err);
@@ -87,17 +79,11 @@ const Header = () => {
     };
   }, [socket]);
 
-  const handleNotificationClick = () => {
-    // Notification click logic if needed
-  };
-
+  // Remove notification logic
   const handleRemoveNotification = (id) => {
-    console.log("This Is The LocalNotification", localNotification);
     setLocalNotification((prev) => {
       const updated = prev.filter((n) => n._id !== id);
       localStorage.setItem("notifications", JSON.stringify(updated));
-
-      console.log("This Is The Updated LocalNotification", updated);
 
       let removedIds = JSON.parse(
         localStorage.getItem("removedNotificationIds") || "[]"
@@ -117,9 +103,8 @@ const Header = () => {
 
   const navItems = [
     { name: "Acceuil", to: "/", dropdown: false },
-    { name: "Fonctionnalités", to: "/features", dropdown: false },
-    { name: "Services", to: "/services", dropdown: false },
-    { name: "A Propos", to: "/about", dropdown: false },
+    { name: "Pharmacies", to: "/pharmacies", dropdown: false },
+    { name: "Medicines", to: "/medicaments", dropdown: false },
   ];
 
   return (
@@ -169,46 +154,37 @@ const Header = () => {
           ) : (
             <div className="flex items-center gap-4">
               {/* Notifications */}
+              <Link to="/cart" className="relative">
+                <Button variant="ghost" size="icon" className="relative">
+                  <FaShoppingCart size={16} />
+                  {Array.isArray(items) && items.length > 0 && (
+                    <span className="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500 rounded-full">
+                      {items.length}
+                    </span>
+                  )}
+                </Button>
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="relative"
-                    onClick={handleNotificationClick}
-                  >
-                    <User size={16} /> Profil
-                  </Link>
-                  <Link
-                    to="/bookmarks"
-                    className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100"
-                  >
-                    <BookmarkPlus size={16} /> Favoris
-                  </Link>
-                  <button
-                    className="w-full text-left flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100"
-                    onClick={handleLogout}
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
-                    <Bell className="h-5 w-5" />
-                    {localNotification.length > 0 && (
-                      <span className="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500 rounded-full">
-                        {localNotification.length}
-                      </span>
-                    )}
-                  </Button>
+                  <div className="flex items-center gap-2">
+                    <Link to="/profile">
+                      <Button variant="ghost" size="icon" className="relative">
+                        <Bell size={16} />
+                        {localNotification.length > 0 && (
+                          <span className="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500 rounded-full">
+                            {localNotification.length}
+                          </span>
+                        )}
+                      </Button>
+                    </Link>
+                  </div>
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent className="w-80 max-h-96 overflow-auto shadow-lg rounded-xl p-2">
                   <div className="text-sm font-semibold px-2 py-1 border-b">
                     Notifications
                   </div>
-                  {notifications.length > 0 ? (
+                  {localNotification.length > 0 ? (
                     localNotification.map((n, i) => (
                       <DropdownMenuItem
                         key={n._id || i}
@@ -247,10 +223,7 @@ const Header = () => {
               {/* User Dropdown */}
               <div className="relative">
                 <button
-                  onClick={() => {
-                    console.log("Button Clicked");
-                    setUserDropdownOpen(!userDropdownOpen);
-                  }}
+                  onClick={() => setUserDropdownOpen((prev) => !prev)}
                   className="flex items-center space-x-2 text-black hover:text-[#39DB74]"
                 >
                   <User size={20} />
@@ -268,15 +241,9 @@ const Header = () => {
                     >
                       <User size={16} /> Profil
                     </Link>
-                    <Link
-                      to="/bookmarks"
-                      className="flex items-center gap-2 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-all duration-150"
-                    >
-                      <BookmarkPlus size={16} /> Favoris
-                    </Link>
                     <button
                       className="w-full text-left flex items-center gap-2 px-4 py-3 text-sm text-red-600 hover:bg-gray-50 transition-all duration-150"
-                      onClick={() => dispatch(logout())}
+                      onClick={handleLogout}
                     >
                       <svg
                         className="w-4 h-4"
@@ -306,12 +273,12 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-black focus:outline-none"
           >
-            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40 px-4 pb-4">
           <nav>
@@ -363,14 +330,8 @@ const Header = () => {
                   >
                     <User size={16} /> Profil
                   </Link>
-                  <Link
-                    to="/bookmarks"
-                    className="flex items-center gap-2 py-2 px-2 hover:bg-gray-50 rounded"
-                  >
-                    <BookmarkPlus size={16} /> Favoris
-                  </Link>
                   <button
-                    onClick={() => dispatch(logout())}
+                    onClick={handleLogout}
                     className="w-full text-left flex items-center gap-2 py-2 px-2 hover:bg-gray-50 rounded text-red-600"
                   >
                     Déconnexion

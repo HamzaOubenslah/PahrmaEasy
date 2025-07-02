@@ -225,7 +225,7 @@ const PharmacienDashboard = () => {
                        order.status === 'pending' ? 'En attente' : 'Annulé'}
                     </span>
                   </td>
-                  <td className="whitespace-nowrap px-5 py-3">€{order.total.toFixed(2)}</td>
+                  <td className="whitespace-nowrap px-5 py-3">€{order.total}</td>
                 </tr>
               ))}
             </tbody>

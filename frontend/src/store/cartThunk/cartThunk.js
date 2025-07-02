@@ -148,6 +148,7 @@ const cartSlice = createSlice({
         state.totalItems = totalItems || 0;
         state.totalPrice = totalPrice || 0;
         state.lastUpdated = Date.now();
+        localStorage.setItem("cart-items", JSON.stringify(cart.items));
       })
       .addCase(addCart.fulfilled, (state, action) => {
         state.loading = false;
@@ -155,6 +156,7 @@ const cartSlice = createSlice({
         state.totalItems = action.payload.data?.totalItems || state.totalItems;
         state.totalPrice = action.payload.data?.totalPrice || state.totalPrice;
         state.lastUpdated = Date.now();
+        localStorage.setItem("cart-items", JSON.stringify(state.items));
       })
       .addCase(updateItemInCart.fulfilled, (state, action) => {
         console.log(
@@ -182,6 +184,7 @@ const cartSlice = createSlice({
         state.totalItems = 0;
         state.totalPrice = 0;
         state.lastUpdated = Date.now();
+        localStorage.getItem("cart-items", "[]");
       });
   },
 });

@@ -1,4 +1,7 @@
-import Medicine from '../models/Medicine.js';
+import Medicine from "../models/Medicine.js";
+import asyncHandler from "../utils/asyncHandler.js";
+import pharmacyService from "../service/pharmacyService.js";
+import ApiResponse from "../utils/ApiResponse.js";
 
 export const getAllMedicines = async (req, res) => {
   try {
@@ -6,7 +9,7 @@ export const getAllMedicines = async (req, res) => {
     let query = {};
 
     if (search) {
-      query.name = { $regex: search, $options: 'i' };
+      query.name = { $regex: search, $options: "i" };
     }
     if (category) {
       query.category = category;
@@ -28,3 +31,10 @@ export const addMedicine = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
+
+export const fetchAllMedicines = asyncHandler(async (req, res) => {
+  const medicines = await pharmacyService.getAllMedicines();
+  res
+    .status(200)
+    .json(new ApiResponse(200, medicines, "getting Medicines Successfully")); // Send medicines as a JSON response
+});

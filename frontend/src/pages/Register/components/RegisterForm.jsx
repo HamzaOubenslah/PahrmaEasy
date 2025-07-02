@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, logout } from "../../../store/authThunk/authThunk"; // adjust path as needed
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -9,13 +9,12 @@ const RegisterForm = () => {
   const navigate = useNavigate();
   // const [userRole,setUserRole] = useState(user.role)
   const [data, setData] = useState({
-
     email: "",
     motDePasse: "",
   });
-useEffect(()=> {
-dispatch(logout())
-},[dispatch])
+  useEffect(() => {
+    dispatch(logout());
+  }, [dispatch]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,24 +26,23 @@ dispatch(logout())
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result =await dispatch(
+    const result = await dispatch(
       loginUser({
         email: data.email,
         password: data.motDePasse, // match what backend expects
       })
     ).unwrap();
     // console.log('this is user ',userRole);
-    
-    console.log("This The Result",result)
-    console.log('this is role',result.data.data.user.role);
-    
+
+    console.log("This The Result", result);
+    console.log("this is role", result.data.data.user.role);
+
     if (result.success) {
-      if(result.data.data.user.role === 'pharmacy'){
+      if (result.data.data.user.role === "pharmacy") {
         navigate("/pharmacien");
-      }
-      else {
-        //to change / to home page route 
-        navigate('/')
+      } else {
+        //to change / to home page route
+        navigate("/");
       }
     }
   };
@@ -109,9 +107,11 @@ dispatch(logout())
       <div className="flex justify-center items-center">
         <p className="font-inter text-[12px]">
           Pas encore inscrit ?{" "}
-          <a href="" className="text-[#4CAF50]">
-            Créez un compte
-          </a>
+          <Link to="/register">
+            <a href="" className="text-[#4CAF50]">
+              Créez un compte
+            </a>
+          </Link>
         </p>
       </div>
 

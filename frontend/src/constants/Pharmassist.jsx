@@ -55,7 +55,7 @@ export const ORDER_STATUS = {
   pending: 'pending',
   shipped: 'shipped',
   delivered: 'delivered',
-  cancelled:'cancelled'
+  cancelled:"cancelled"
 
 };
 

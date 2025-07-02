@@ -7,16 +7,17 @@ import {
   clearCart,
   updateItemInCart,
 } from "../store/cartThunk/cartThunk";
+import { createOrder } from "../store/orderThunk/orderThunk";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Trash2, Plus, Minus, ShoppingCart, ArrowRight } from "lucide-react";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { items, loading, error, totalItems, totalPrice } = useSelector(
+  let { items, loading, error, totalItems, totalPrice } = useSelector(
     (state) => state.cart
   );
-
+  console.log("This Is The Items Of Cart", items);
   useEffect(() => {
     dispatch(getCart());
   }, [dispatch]);
@@ -26,6 +27,10 @@ const Cart = () => {
   const handleRemoveQuantity = (medicineId) =>
     dispatch(removeMedicineFromCart({ medicineId }));
   const handleClearCart = () => dispatch(clearCart());
+
+  const handleOrderCreation = () => {
+    dispatch(createOrder());
+  };
 
   if (loading)
     return (
@@ -187,7 +192,14 @@ const Cart = () => {
                 </div>
               </div>
 
-              <Button className="w-full mt-8 h-12 text-lg" size="lg">
+              <Button
+                className="w-full mt-8 h-12 text-lg"
+                onClick={() => {
+                  handleOrderCreation();
+                  dispatch(clearCart())
+                }}
+                size="lg"
+              >
                 Proceed to Checkout
               </Button>
 

@@ -26,11 +26,16 @@ export const initSocket = (httpServer) => {
   });
 };
 
-export const sendNotification = async (pharmacyId, notificationData) => {
+export const sendNotification = async (
+  targetUserId,
+  notificationData,
+  role
+) => {
   const notification = await Notification.create({
-    pharmacy:pharmacyId,
+    [role]: targetUserId, // will assign to either 'customer' or 'pharmacy'
     ...notificationData,
   });
-
-  io.to(`user_${pharmacyId}`).emit("new-notification", notification);
+  console.log("This Is The Target User In SendNotification", targetUserId);
+  // Send to correct socket room
+  io.to(`user_${targetUserId}`).emit("new-notification", notification);
 };

@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3000/api/pharmacy",
+  baseURL: "http://localhost:5001/api/pharmacy",
   withCredentials: true,
 });
 
@@ -12,7 +12,7 @@ const getAuthHeader = () => {
   const token = localStorage.getItem("token");
   return {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `bearer ${token}`,
     },
   };
 };
@@ -25,7 +25,9 @@ export const fetchMedicines = createAsyncThunk(
       const response = await API.get("/medicines", getAuthHeader());
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to fetch medicines");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to fetch medicines"
+      );
     }
   }
 );
@@ -34,10 +36,16 @@ export const createMedicine = createAsyncThunk(
   "pharmacy/createMedicine",
   async (medicineData, { rejectWithValue }) => {
     try {
-      const response = await API.post("/medicines", medicineData, getAuthHeader());
+      const response = await API.post(
+        "/medicines",
+        medicineData,
+        getAuthHeader()
+      );
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to create medicine");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to create medicine"
+      );
     }
   }
 );
@@ -46,10 +54,16 @@ export const updateMedicine = createAsyncThunk(
   "pharmacy/updateMedicine",
   async ({ medicineId, medicineData }, { rejectWithValue }) => {
     try {
-      const response = await API.put(`/medicines/${medicineId}`, medicineData, getAuthHeader());
+      const response = await API.put(
+        `/medicines/${medicineId}`,
+        medicineData,
+        getAuthHeader()
+      );
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to update medicine");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to update medicine"
+      );
     }
   }
 );
@@ -61,7 +75,23 @@ export const deleteMedicine = createAsyncThunk(
       await API.delete(`/medicines/${medicineId}`, getAuthHeader());
       return medicineId;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to delete medicine");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to delete medicine"
+      );
+    }
+  }
+);
+export const fetchAllMedicines = createAsyncThunk(
+  "medicines/fetchAll",
+  async (_, { rejectWithValue }) => {
+    try {
+      const res = await API.get("http://localhost:5001/api/medicines/all-medicines"); // Add search query if needed
+      console.log("This Is tHE Res In Get All Medicine,", res);
+      return res.data.data;
+    } catch (error) {
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to delete medicine"
+      );
     }
   }
 );
@@ -71,9 +101,12 @@ export const fetchCategories = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await API.get("/categories", getAuthHeader());
+      console.log("This Is The Response", response.data.data);
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to fetch categories");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to fetch categories"
+      );
     }
   }
 );
@@ -82,10 +115,16 @@ export const createCategory = createAsyncThunk(
   "pharmacy/createCategory",
   async (categoryData, { rejectWithValue }) => {
     try {
-      const response = await API.post("/categories", categoryData, getAuthHeader());
+      const response = await API.post(
+        "/categories",
+        categoryData,
+        getAuthHeader()
+      );
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to create category");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to create category"
+      );
     }
   }
 );
@@ -97,7 +136,9 @@ export const fetchPharmacyReviews = createAsyncThunk(
       const response = await API.get("/reviews", getAuthHeader());
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to fetch reviews");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to fetch reviews"
+      );
     }
   }
 );
@@ -109,7 +150,9 @@ export const deleteReview = createAsyncThunk(
       await API.delete(`/reviews/${reviewId}`, getAuthHeader());
       return reviewId;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to delete review");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to delete review"
+      );
     }
   }
 );
@@ -120,11 +163,12 @@ export const fetchOrders = createAsyncThunk(
       const response = await API.get("/orders", getAuthHeader());
       return response.data.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || "Failed to fetch orders");
+      return rejectWithValue(
+        err.response?.data?.message || "Failed to fetch orders"
+      );
     }
   }
 );
-
 
 const initialState = {
   medicines: [],
@@ -147,6 +191,7 @@ const pharmacySlice = createSlice({
         state.error = null;
       })
       .addCase(fetchMedicines.fulfilled, (state, action) => {
+        console.log("This Is The Medicine Data", action.payload);
         state.loading = false;
         state.medicines = action.payload;
       })
@@ -154,7 +199,7 @@ const pharmacySlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-      
+
       // Create Medicine
       .addCase(createMedicine.pending, (state) => {
         state.loading = true;
@@ -168,7 +213,7 @@ const pharmacySlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-      
+
       // Update Medicine
       .addCase(updateMedicine.pending, (state) => {
         state.loading = true;
@@ -187,7 +232,7 @@ const pharmacySlice = createSlice({
         state.loading = false;
         state.error = action.payload;
       })
-      
+
       // Delete Medicine
       .addCase(deleteMedicine.pending, (state) => {
         state.loading = true;
@@ -204,59 +249,74 @@ const pharmacySlice = createSlice({
         state.error = action.payload;
       })
       .addCase(fetchCategories.pending, (state) => {
-      state.loading = true;
-      state.error = null;
-    })
-    .addCase(fetchCategories.fulfilled, (state, action) => {
-      state.loading = false;
-      state.categories = action.payload;
-    })
-    .addCase(fetchCategories.rejected, (state, action) => {
-      state.loading = false;
-      state.error = action.payload;
-    })
-    
-    // Create Category
-    .addCase(createCategory.pending, (state) => {
-      state.loading = true;
-      state.error = null;
-    })
-    .addCase(createCategory.fulfilled, (state, action) => {
-      state.loading = false;
-      state.categories.push(action.payload);
-    })
-    .addCase(createCategory.rejected, (state, action) => {
-      state.loading = false;
-      state.error = action.payload;
-    })
-    
-.addCase(fetchPharmacyReviews.pending, (state) => {
-  state.loading = true;
-  state.error = null;
-})
-.addCase(fetchPharmacyReviews.fulfilled, (state, action) => {
-  state.loading = false;
-  state.reviews = action.payload;
-})
-.addCase(fetchPharmacyReviews.rejected, (state, action) => {
-  state.loading = false;
-  state.error = action.payload;
-})
-.addCase(deleteReview.fulfilled, (state, action) => {
-  state.reviews = state.reviews.filter(review => review._id !== action.payload);
-})
-.addCase(fetchOrders.pending, (state) => {
-  state.loading = true;
-  state.error = null;
-})
-.addCase(fetchOrders.fulfilled, (state, action) => {
-  state.loading = false;
-  state.orders = action.payload;
-})
-.addCase(fetchOrders.rejected, (state, action) => {
-  state.loading = false;
-  state.error = action.payload;
-});
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchCategories.fulfilled, (state, action) => {
+        console.log("This Is The Category Data", action.payload);
+        state.loading = false;
+        state.categories = action.payload;
+      })
+      .addCase(fetchCategories.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      // Create Category
+      .addCase(createCategory.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(createCategory.fulfilled, (state, action) => {
+        state.loading = false;
+        state.categories.push(action.payload);
+      })
+      .addCase(createCategory.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      .addCase(fetchPharmacyReviews.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchPharmacyReviews.fulfilled, (state, action) => {
+        state.loading = false;
+        state.reviews = action.payload;
+      })
+      .addCase(fetchPharmacyReviews.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(deleteReview.fulfilled, (state, action) => {
+        state.reviews = state.reviews.filter(
+          (review) => review._id !== action.payload
+        );
+      })
+      .addCase(fetchOrders.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchOrders.fulfilled, (state, action) => {
+        state.loading = false;
+        state.orders = action.payload;
+      })
+      .addCase(fetchOrders.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(fetchAllMedicines.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchAllMedicines.fulfilled, (state, action) => {
+        console.log("This Is The Medicines", action.payload);
+        state.loading = false;
+        state.medicines = action.payload;
+      })
+      .addCase(fetchAllMedicines.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
   },
 });
 
